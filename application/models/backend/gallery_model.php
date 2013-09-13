@@ -192,7 +192,7 @@ function delete_cate($id)
                     'quality' => '100',
                     'remove_spaces' => TRUE,
                     'maintain_ratio' => false,
-                    'new_image'     => $upload_data['file_path'].'thumbs/'.$upload_data['file_name'],
+                    'new_image'     => $upload_data['file_path'].'resize/'.$upload_data['file_name'],
                     'width'         => 800,
                     'height'        => 533
                     );
@@ -204,7 +204,7 @@ function delete_cate($id)
 					    'remove_spaces' => TRUE,
 					    'maintain_ratio' => false,
 					    'source_image' => $upload_data['file_path'].$upload_data['file_name'],
-					    'new_image' => $upload_data['file_path'].'resize/'.$upload_data['file_name'],
+					    'new_image' => $upload_data['file_path'].'thumbs/'.$upload_data['file_name'],
 					    'width' => 285,
 					    'height' => 190
 					);
@@ -387,7 +387,7 @@ function delete_cate($id)
                     'quality' => '80',
                     'remove_spaces' =>TRUE,
                     'maintain_ratio' => false,
-                    'new_image'     => $upload_data['file_path'].'thumbs/'.$upload_data['file_name'],
+                    'new_image'     => $upload_data['file_path'].'resize/'.$upload_data['file_name'],
                     'width'         => 800,
                     'height'        => 533
                     );
@@ -399,7 +399,7 @@ function delete_cate($id)
 					    'remove_spaces' => TRUE,
 					    'maintain_ratio' => false,
 					    'source_image' => $upload_data['file_path'].$upload_data['file_name'],
-					    'new_image' => $upload_data['file_path'].'resize/'.$upload_data['file_name'],
+					    'new_image' => $upload_data['file_path'].'thumbs/'.$upload_data['file_name'],
 					    'width' => 285,
 					    'height' => 190
 					);
