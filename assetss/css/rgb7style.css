@@ -1,0 +1,571 @@
+
+
+/*
+
+d8888b.  d888b  d8888b. d88888D 
+88  `8D 88' Y8b 88  `8D VP  d8' 
+88oobY' 88      88oooY'    d8'  
+88`8b   88  ooo 88~~~b.   d8'   
+88 `88. 88. ~8~ 88   8D  d8'    
+88   YD  Y888P  Y8888P' d8'     
+                             
+* Copyright 2013, by RGB7
+
+*/
+
+
+
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+
+/* #Typography
+================================================== */
+
+@font-face {
+    font-family: 'thai_sans_literegular';
+    src: url('thaisanslite_r1-webfont.eot');
+    src: url('thaisanslite_r1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('thaisanslite_r1-webfont.woff') format('woff'),
+         url('thaisanslite_r1-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.thaisanFont {
+
+		font-family: 'thai_sans_literegular';
+	}
+	
+	/* @group Font Style Group */
+	h1,
+	.h1 {
+	  font-size: 36px;
+		color: #f7eac7;
+	}
+	
+	h2,
+	.h2 {
+	  font-size: 30px;
+		color: silver;
+	}
+	
+	h3,
+	.h3 {
+	  font-size: 24px;
+		color: silver;
+	}
+	
+	h4,
+	.h4 {
+	  font-size: 18px;
+		color: silver;
+	}
+	
+	h5,
+	.h5 {
+	  font-size: 14px;
+		color: silver;
+	}
+	
+	h6,
+	.h6 {
+	  font-size: 12px;
+		color: silver;
+	}
+	
+	p{
+		color: #d2d2d2;
+	}
+	
+	ul li{
+	color: silver;
+	}
+	
+	.content-sub-section a:link{
+		color: #F7DF8F;
+	}
+	
+	table{
+		color: #dcdcdc;
+	}
+	/* @end */
+	
+	/* @group Colour Background Group */
+
+.bgBodyZone{
+	background-color: #a3a093;
+}
+.bgHeaderZone{
+	background-color: #f7eac7;
+}
+
+.bgNavZone{
+	background-color: #737777;
+}
+.bgNavZoneSub{
+	background-color: #635d5d;
+}
+
+.bgContentZone{
+	background-color: #322823;
+}
+
+
+.bgH1Zone{
+	background-color: #604234;
+}
+.content-section h1{
+	color: #f7eac7;
+	font: 2em 'thai_sans_literegular';
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0 0 0 10px;
+}
+
+
+.content-section h2{
+	color: silver;
+	font: 1em "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin: 10px 0;
+}
+
+
+
+
+.content-section p{
+	color: silver;
+	font: 0.875em "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin: 10px 0;
+}
+
+/* @end */
+
+/* @group RGB7 tweak Group */
+.fillRed{
+	background-color: red;
+}
+.fillYellow{
+	background: yellow;
+}
+.fillBlack{
+	background-color: black;
+}
+
+.fillGreen{
+	background-color: green;
+}
+.fillBlue{
+	background-color: blue;
+}
+
+.fillAqua{
+	background: aqua;
+}
+
+.fillNavy{
+	background-color: navy;
+}
+
+.fillPurple{
+	background-color: purple;
+}
+.content{
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Space things out */
+.content-section + .content-section {
+  padding-top: 40px;
+}
+
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid gray;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Header Group */
+
+header#headerZone address p{
+	color: #584e3a;
+}
+
+/* @end */
+
+/* @group NavBar Group */
+
+.nav  li a{
+	color: #f7eac7;
+	font: 22px 'thai_sans_literegular';
+}
+
+.nav  li a:hover{
+	background-color: #484a4a;
+}
+
+.nav  li.active{
+	background-color: #635d5d;
+}
+
+.subMenu .nav  li a{
+	color: #f7eac7;
+	font: 18px 'thai_sans_literegular';
+}
+
+.subMenu .nav  li a:hover{
+	background-color: #484a4a;
+}
+.subMenu .nav li.active{
+ background-color: #484a4a;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #484a4a;
+  border-color: #428bca;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #484a4a;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #428bca;
+}
+
+.nav .caret {
+  border-top-color: #f7eac7;
+  border-bottom-color: #428bca;
+}
+
+.nav a:hover .caret {
+  border-top-color: #f7eac7;
+  border-bottom-color: #2a6496;
+}
+
+
+
+/* @end */
+
+/* @group btn Group */
+
+.btn-group .dropdown-toggle {
+ background: rgb(72,55,127); /* Old browsers */
+ /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ4Mzc3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ODM3N2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ background: -moz-linear-gradient(top,  rgba(72,55,127,1) 0%, rgba(72,55,127,1) 100%); /* FF3.6+ */
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(72,55,127,1)), color-stop(100%,rgba(72,55,127,1))); /* Chrome,Safari4+ */
+ background: -webkit-linear-gradient(top,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* Chrome10+,Safari5.1+ */
+ background: -o-linear-gradient(top,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* Opera 11.10+ */
+ background: -ms-linear-gradient(top,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* IE10+ */
+ background: linear-gradient(to bottom,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48377f', endColorstr='#48377f',GradientType=0 ); /* IE6-8 */
+  
+ border: 1px none #c2c2c2;
+ margin: 0;
+ color: white;
+ -moz-box-shadow: 0 0 0 #ffffff;
+ -webkit-box-shadow: 0 0 0 #ffffff;
+ box-shadow: 0 0 0 #ffffff;
+}
+
+.btn-group.open .btn.dropdown-toggle {
+  background-color: orange;
+}
+
+
+.marginBtnGroup{
+	float: left;
+	margin-top: 10px;
+}
+.btn-info {
+ background: rgb(72,55,127); /* Old browsers */
+ /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ4Mzc3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ODM3N2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ background: -moz-linear-gradient(top,  rgba(72,55,127,1) 0%, rgba(72,55,127,1) 100%); /* FF3.6+ */
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(72,55,127,1)), color-stop(100%,rgba(72,55,127,1))); /* Chrome,Safari4+ */
+ background: -webkit-linear-gradient(top,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* Chrome10+,Safari5.1+ */
+ background: -o-linear-gradient(top,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* Opera 11.10+ */
+ background: -ms-linear-gradient(top,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* IE10+ */
+ background: linear-gradient(to bottom,  rgba(72,55,127,1) 0%,rgba(72,55,127,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48377f', endColorstr='#48377f',GradientType=0 ); /* IE6-8 */
+     
+  
+  
+ border: 1px solid #c2c2c2;
+ margin: 0;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  color: #ffffff;
+  background-color: #2f96b4;
+  *background-color: #2a85a0;
+  border: 1px solid white;
+}
+
+.btn-info:active,
+.btn-info.active {
+  background-color: #24748c \9;
+}
+
+
+
+
+/* @group Default Group */
+
+.landingBtMore{
+
+	margin-right: 20px;
+}
+
+.btn-warning {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+ background: rgb(242,175,50); /* Old browsers */
+ /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyYWYzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iI2YzYWUyNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+ background: -moz-linear-gradient(top,  rgba(242,175,50,1) 0%, rgba(243,174,39,1) 99%); /* FF3.6+ */
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,175,50,1)), color-stop(99%,rgba(243,174,39,1))); /* Chrome,Safari4+ */
+ background: -webkit-linear-gradient(top,  rgba(242,175,50,1) 0%,rgba(243,174,39,1) 99%); /* Chrome10+,Safari5.1+ */
+ background: -o-linear-gradient(top,  rgba(242,175,50,1) 0%,rgba(243,174,39,1) 99%); /* Opera 11.10+ */
+ background: -ms-linear-gradient(top,  rgba(242,175,50,1) 0%,rgba(243,174,39,1) 99%); /* IE10+ */
+ background: linear-gradient(to bottom,  rgba(242,175,50,1) 0%,rgba(243,174,39,1) 99%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2af32', endColorstr='#f3ae27',GradientType=0 ); /* IE6-8 */
+ 
+  
+border-style: none;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+	background: rgb(239,158,7); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmOWUwNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iI2YzYWUyNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  rgba(239,158,7,1) 0%, rgba(243,174,39,1) 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,158,7,1)), color-stop(99%,rgba(243,174,39,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(239,158,7,1) 0%,rgba(243,174,39,1) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(239,158,7,1) 0%,rgba(243,174,39,1) 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(239,158,7,1) 0%,rgba(243,174,39,1) 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(239,158,7,1) 0%,rgba(243,174,39,1) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef9e07', endColorstr='#f3ae27',GradientType=0 ); /* IE6-8 */
+	
+}
+
+/* @end */
+
+/* @end */
+/* @group historypage Group */
+
+.his-imgL{
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+
+.his-imgR{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+/* @end */
+
+
+.piclist{
+	padding-bottom: 30px;
+}
+.bookbut{
+	margin-bottom: 15px;
+}
+.picdu{
+	margin-top: 15px;
+}
+/* @group bookLibrary Group */
+
+.booklibrary{
+	margin: 0;
+	padding: 0;
+}
+.booklibrary h2{
+	font-size: 1.8ex;
+	text-align: center;
+}
+.bookLibrarySearch{
+}
+.bookLibrarySearch h3{
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+
+
+.bookLibrarySearch div.form-group {
+	margin-top: 2%;
+	margin-right: 20px;
+	width: 220px;
+}
+
+
+.bookLibrarySearch button.btn.btn-default {
+	margin-top: 4%;
+	width: 120px;
+}
+
+
+.bookOnline p{
+	font-size: 12px;
+	text-align: center;
+}
+
+
+
+
+/* @end */
+
+/* @group Landingpage Group */
+
+
+section#landingBookOnline h2{
+	text-align: center;
+}
+
+
+
+.bgH1Zone .moreLink{
+	background-color: #604234;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+.bgH1Zone .moreLink a{
+	color: #eed48e;
+	text-decoration: none;
+}
+
+
+
+/* @end */
+
+/* @group Content Group */
+
+section#subContent .content-section h2{
+	color: #f6f6f6;
+	font: 24px "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin: 10px 0;
+}
+
+section#subContent ol{
+	color: #e9e9e9;
+	font-size: 14px;
+}
+
+section#subContent p{
+	color: #efefef;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+
+label {
+	color: #dcdcdc;
+}
+
+.breadcrumb{
+	background-color: #604234;
+}
+/* @end */
+/* @group footer Group */
+.footerZone{
+	background-color: silver;
+	padding-bottom: 20px;
+}
+
+footer a{
+	color: #a2a2a2;
+}
+
+footer a:hover{
+	color: white;
+}
+
+footer h3{
+color: silver;
+	margin: 0 0 10px;
+	font-size: 1.5em;
+}
+
+footer address{
+	color: #a6a6a6;
+}
+
+p.copyright{
+	color: gray;
+}
+/* @end */
+
+
+
+
+
+
+
