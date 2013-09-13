@@ -14,4 +14,13 @@ class Society extends CI_Controller {
 		$this->load->view('front/society/jan-1');
 		$this->load->view('front/temp/footer');
 	}
+
+	function jan_2()
+	{
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/society/jan-2');
+		$this->load->view('front/temp/footer');
+	}
+
 }
