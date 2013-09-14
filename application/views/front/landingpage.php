@@ -127,8 +127,8 @@
 
 			   ?>
     	   <div class="col-md-2 col-lg-2 col-sm-2  col-xs-6 ">
-    	        <a href="<?= site_url("ebook/detail/$book_id/".url_title($row['ebook_title'])."");?>">
-	    	        <img src="<?= site_url("images/ebook/img/$ebook_img");?>" height="200px" width="100%" alt="<?= $rs_ebook['ebook_name'];?>">
+    	        <a href="<?= site_url("library/detail/$book_id/".url_title($row['ebook_title'])."");?>">
+	    	        <img src="<?= site_url("images/ebook/img/$ebook_img");?>" width="100%" height="291px" class="img-responsive" alt="<?= $rs_ebook['ebook_name'];?>">
     	        </a>
     	        <h2><?= $row['ebook_title'];?></h2>
 
