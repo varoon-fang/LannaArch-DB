@@ -37,7 +37,7 @@
 
 		   		          <div class="row h1Tab bgH1Zone">
 		   		              <span class="pull-left"><h1 class="pull-left"><?= $gallery_group_name;?></h1> </span>
-		   		              <span class="pull-right moreLink"><a href="<?= site_url("library/gallery_more/$gallery_group_id/");?>">เพิ่มเติม &gt;&gt;</a></span>
+		   		              <span class="pull-right moreLink"><a href="<?= site_url("gallery/more/$gallery_group_id/");?>">เพิ่มเติม &gt;&gt;</a></span>
 		   		          </div><!--end row-->
 		   		          <br class="clearfix">
 
@@ -62,7 +62,7 @@
 	   		    	?>
    		    		<!--====== items ======-->
    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-   		    			<a href="<?= site_url("library/gallery_detail/$gallery_id");?>"><img src="<?= site_url("images/gallery/resize/$gallery_img");?>" alt="<?= $gallery_name;?>" class="img-responsive "/></a>
+   		    			<a href="<?= site_url("gallery_detail/$gallery_id");?>"><img src="<?= site_url("images/gallery/resize/$gallery_img");?>" alt="<?= $gallery_name;?>" class="img-responsive "/></a>
    		    	        <h2><?= word_limiter($gallery_name, 5);?></h2>
    		    	        <p><?= word_limiter($gallery_detail, 10);?></p>
 

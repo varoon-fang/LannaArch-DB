@@ -18,7 +18,7 @@
 
 	   <div class="content-section">
 	     		<div class="row h1Tab bgH1Zone">
-	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("library/gallery");?>">ห้องสมุดภาพวาด</a> &gt; <a href="<?= site_url("library/gallery_more/".$res_gallery['gallery_group']."");?>"><?= $res_group['gallery_group_name'];?></a> &gt; <?= $res_gallery['gallery_title'];?></h1> </span>
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("gallery");?>">ห้องสมุดภาพวาด</a> &gt; <a href="<?= site_url("gallery/more/".$res_gallery['gallery_group']."");?>"><?= $res_group['gallery_group_name'];?></a> &gt; <?= $res_gallery['gallery_title'];?></h1> </span>
 	     		</div><!--end row-->
 
       <br class="clearfix">

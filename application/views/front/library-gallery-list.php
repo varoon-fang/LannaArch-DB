@@ -18,7 +18,7 @@
 
 	   <div class="content-section">
 	     		<div class="row h1Tab bgH1Zone">
-	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("library/gallery");?>">ห้องสมุดภาพวาด</a> &gt; <?= $res_group['gallery_group_name'];?></h1> </span>
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("gallery");?>">ห้องสมุดภาพวาด</a> &gt; <?= $res_group['gallery_group_name'];?></h1> </span>
 	     		</div><!--end row-->
 
       <br class="clearfix">
@@ -44,7 +44,7 @@
 
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("library/gallery_detail/$row[gallery_id]/".url_title($row['gallery_title'])."");?>"><img src="<?= site_url("images/gallery/resize/$gallery_img");?>" alt="<?= $row['gallery_title'];?>" class="img-responsive "/></a>
+	    		    			<a href="<?= site_url("gallery/detail/$row[gallery_id]/".url_title($row['gallery_title'])."");?>"><img src="<?= site_url("images/gallery/resize/$gallery_img");?>" alt="<?= $row['gallery_title'];?>" class="img-responsive "/></a>
 								<h2><?= word_limiter($row['gallery_title'], 5);?></h2>
 								<p><?= word_limiter($row['gallery_from'], 10);?></p>
 

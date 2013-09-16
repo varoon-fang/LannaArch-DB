@@ -5,8 +5,8 @@
                 <nav class="subMenu">
 
                     <ul class="nav navbar-nav  ">
-                        <li <? if($this->uri->segment(1)=="library" AND $this->uri->segment(2)==""){ echo 'class="active"';};?>><a href="<?= site_url('library');?>">ห้องสมุดหนังสือ</a></li>
-                        <li <? if($this->uri->segment(2)=="gallery" OR $this->uri->segment(2)=="gallery_more" OR $this->uri->segment(2)=="gallery_detail") { echo 'class="active"';};?> ><a href="<?= site_url('library/gallery');?>">ห้องสมุดภาพ</a></li>
+                        <li <? if($this->uri->segment(1)=="library"){ echo 'class="active"';};?>><a href="<?= site_url('library');?>">ห้องสมุดหนังสือ</a></li>
+                        <li <? if($this->uri->segment(1)=="gallery" OR $this->uri->segment(1)=="gallery_more" OR $this->uri->segment(2)=="gallery_detail") { echo 'class="active"';};?> ><a href="<?= site_url('gallery');?>">ห้องสมุดภาพ</a></li>
 
                         <li class="dropdown ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">วัฒนธรรมและประเพณี <b class="caret"></b></a>
@@ -26,14 +26,14 @@
 
                             </ul>
                         </li>
-                        <li <? if($this->uri->segment(2)=="art"){ echo 'class="active"';};?> ><a href="<?= site_url('library/art');?>">ศิลปกรรม</a></li>
-                        <li <? if($this->uri->segment(1)=="lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('library/lanna');?>">ข้อมูลล้านนา</a></li>
-                        <li <? if($this->uri->segment(2)=="library_arch"){ echo 'class="active"';};?> class="dropdown">
+                        <li <? if($this->uri->segment(1)=="art"){ echo 'class="active"';};?> ><a href="<?= site_url('art');?>">ศิลปกรรม</a></li>
+                        <li <? if($this->uri->segment(1)=="lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('lanna');?>">ข้อมูลล้านนา</a></li>
+                        <li <? if($this->uri->segment(1)=="arch"){ echo 'class="active"';};?> class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ห้องสมุดสถาปัตยกรรม <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= site_url('library/architecture');?>">แบบสถาปัตยกรรม</a></li>
-                                <li><a href="<?= site_url('library/model');?>">รูปหุ่นจำลอง</a></li>
-                                <li><a href="<?= site_url('library/tree_d');?>">ภาพ 3 มิติ</a></li>
+                                <li><a href="<?= site_url('arch/architecture');?>">แบบสถาปัตยกรรม</a></li>
+                                <li><a href="<?= site_url('arch/model');?>">รูปหุ่นจำลอง</a></li>
+                                <li><a href="<?= site_url('arch/tree_d');?>">ภาพ 3 มิติ</a></li>
                             </ul>
                         </li>
                     </ul>
