@@ -56,6 +56,13 @@
 						</script>
 					<? }?>
 
+			<div class="control-group">
+    	  <label class="control-label" for="name">ผู้ออกแบบ : </label>
+    	  <div class="controls">
+    	    <input type="text" placeholder="กรอกข้อความ…"  name="writer" value="<?= $rs['layout_writer'];?>" class="span6" id="title_th">
+    	  </div>
+    	</div>
+
 
 			<!--=====Picture Addd=======-->
 	    	<div class="well">

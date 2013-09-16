@@ -53,6 +53,14 @@ $this->load->view('admin/components/page_subhead');
 						var editorObj=CKEDITOR.replace('detail_th',cke_config);
 					</script>
 				<? }?>
+
+		<div class="control-group">
+    	  <label class="control-label" for="name">ผู้ออกแบบ : </label>
+    	  <div class="controls">
+    	    <input type="text" placeholder="กรอกข้อความ…"  name="writer"  class="span6" id="title_th">
+    	  </div>
+    	</div>
+
 		    		</div> <!-- well -->
 	        	   	<!--=====Picture Addd=======-->
 	    	<div class="well">

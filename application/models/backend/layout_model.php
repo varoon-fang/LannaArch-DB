@@ -139,10 +139,11 @@ function delete_cate($id)
 
         //add data
 	    	$data = array(
-	    	   'layout_group'		=> $this->input->post('group'),
-	    	   'layout_title' 	=> ($this->input->post('title_th')),
-			   'layout_detail' 	=> ($this->input->post('detail_th')),
-			   'layout_date' 		=> date('Y-m-d H:i:s'),
+	    	   'layout_group'     => $this->input->post('group'),
+	    	   'layout_title'     => ($this->input->post('title_th')),
+	    	   'layout_writer'    => ($this->input->post('writer')),
+			   'layout_detail'    => ($this->input->post('detail_th')),
+			   'layout_date'      => date('Y-m-d H:i:s'),
 			);
 		$this->db->insert("layout_arch", $data);
 
@@ -292,6 +293,7 @@ function delete_cate($id)
         //add data
 	    	$data = array(
 	    	   'layout_group'		=> $this->input->post('group'),
+	    	   'layout_writer'    => ($this->input->post('writer')),
 	    	   'layout_title' 	=> ($this->input->post('title_th')),
 			   'layout_detail' 	=> ($this->input->post('detail_th')),
 			);
