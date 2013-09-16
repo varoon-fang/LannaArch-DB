@@ -14,7 +14,7 @@
     <div class="content-sub-section">
 
 	  <section id="subContent" >
-		 <h1>หุ่นจำลอง</h1>
+		 <h1>ภาพ 3 มิติ</h1>
 		 		<div class="content-section">
 		 		   		<div class="row ">
 			 		   		<?php
