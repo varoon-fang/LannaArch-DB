@@ -107,7 +107,7 @@ class Architecture extends CI_Controller {
 //------------------------ information --------------------------
 	function information()
 	{
-		$this->data['meta_title'] = "ข้อมูลทั่วไป";
+		$this->data['meta_title'] = "ห้องสมุดสถาปัตยกรรม | ข้อมูลทั่วไป";
 
 		// information group
 		$sql_information = "select * from information group by information_group desc";
@@ -238,7 +238,7 @@ class Architecture extends CI_Controller {
 //------------------------ Model --------------------------
 	function model()
 	{
-		$this->data['meta_title'] = "หุ่นจำลอง";
+		$this->data['meta_title'] = "ห้องสมุดสถาปัตยกรรม | หุ่นจำลอง";
 
 
 		$get_page = $this->uri->segment(3);
@@ -301,7 +301,7 @@ class Architecture extends CI_Controller {
 //------------------------ 3D --------------------------
 	function hologram()
 	{
-		$this->data['meta_title'] = "ภาพ 3 มิติ";
+		$this->data['meta_title'] = "ห้องสมุดสถาปัตยกรรม | ภาพ 3 มิติ";
 
 
 		$get_page = $this->uri->segment(3);
