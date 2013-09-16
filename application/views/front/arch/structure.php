@@ -37,7 +37,7 @@
 
 		   		          <div class="row h1Tab bgH1Zone">
 		   		              <span class="pull-left"><h1 class="pull-left"><?= $layout_group_name;?></h1> </span>
-		   		              <span class="pull-right moreLink"><a href="<?= site_url("arch/structure_more/$layout_group_id/");?>">เพิ่มเติม &gt;&gt;</a></span>
+		   		              <span class="pull-right moreLink"><a href="<?= site_url("architecture/structure_more/$layout_group_id/");?>">เพิ่มเติม &gt;&gt;</a></span>
 		   		          </div><!--end row-->
 		   		          <br class="clearfix">
 

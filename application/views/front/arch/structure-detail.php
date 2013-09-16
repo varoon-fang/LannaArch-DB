@@ -20,7 +20,7 @@
 		 <div class="content-section">
 		   		<div class="row h1Tab bgH1Zone">
 		               <span class="pull-left">
-		               		<h1 class="pull-left"><a href="<?= site_url("arch/structure");?>">แบบสถาปัตยกรรม</a> &gt; <a href="<?= site_url("arch/structure_more/$res_group[layout_group_id]");?>"> <?= $res_group['layout_group_name'];?></a> &gt; <?= $res_layout['layout_title'];?> </h1>
+		               		<h1 class="pull-left"><a href="<?= site_url("architecture/structure");?>">แบบสถาปัตยกรรม</a> &gt; <a href="<?= site_url("architecture/structure_more/$res_group[layout_group_id]");?>"> <?= $res_group['layout_group_name'];?></a> &gt; <?= $res_layout['layout_title'];?> </h1>
 	               		</span>
 		   		</div><!--end row-->
 

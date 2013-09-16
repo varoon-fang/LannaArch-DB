@@ -18,7 +18,7 @@
 
 	   <div class="content-section">
 	     		<div class="row h1Tab bgH1Zone">
-	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("arch/information");?>">ข้อมูลทั่วไป</a> &gt; <a href="<?= site_url("arch/information_more/".$res_information['information_group']."");?>"><?= $res_group['information_group_name'];?></a> &gt; <?= $res_information['information_title'];?></h1> </span>
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("architecture/information");?>">ข้อมูลทั่วไป</a> &gt; <a href="<?= site_url("architecture/information_more/".$res_information['information_group']."");?>"><?= $res_group['information_group_name'];?></a> &gt; <?= $res_information['information_title'];?></h1> </span>
 	     		</div><!--end row-->
 
       <br class="clearfix">
@@ -29,15 +29,6 @@
 
       <br />
       </div>
-
-     <!--
- <div class="bookLibrarySearch well bgNavZoneSub">
-
-      <h4><span class="pull-left">ชื่อภาพ <?= $res_information['information_title'];?></span></h4>
-      <h4><span class="pull-right">ที่มาของภาพ : <?= $res_information['information_from'];?></span></h4>
-      <br />
-      </div>
--->
 
 	      <section id="subContent" >
 	    	  <br class="clearfix">

@@ -18,7 +18,7 @@
 
 	   <div class="content-section">
 	     		<div class="row h1Tab bgH1Zone">
-	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("arch/structure");?>">แบบสภาปัตยกรรม</a> &gt; <?= $res_group['layout_group_name'];?></h1> </span>
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("architecture/structure");?>">แบบสภาปัตยกรรม</a> &gt; <?= $res_group['layout_group_name'];?></h1> </span>
 	     		</div><!--end row-->
 
       <br class="clearfix">
@@ -44,7 +44,7 @@
 
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("arch/structure_detail/$row[layout_id]/".url_title($row['layout_title'])."");?>"><img src="<?= site_url("images/layout_arch/resize/$layout_img");?>" alt="<?= $row['layout_title'];?>" class="img-responsive "/></a>
+	    		    			<a href="<?= site_url("architecture/structure_detail/$row[layout_id]/".url_title($row['layout_title'])."");?>"><img src="<?= site_url("images/layout_arch/resize/$layout_img");?>" alt="<?= $row['layout_title'];?>" class="img-responsive "/></a>
 								<h2><?= word_limiter($row['layout_title'], 5);?></h2>
 								<p><?= word_limiter($row['layout_detail'], 10);?></p>
 

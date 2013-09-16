@@ -18,7 +18,7 @@
 
 	   <div class="content-section">
 	     		<div class="row h1Tab bgH1Zone">
-	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("arch/information");?>">ข้อมูลทั่วไป</a> &gt; <?= $res_group['information_group_name'];?></h1> </span>
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("architecture/information");?>">ข้อมูลทั่วไป</a> &gt; <?= $res_group['information_group_name'];?></h1> </span>
 	     		</div><!--end row-->
 
       <br class="clearfix">
@@ -44,7 +44,7 @@
 
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("arch/information_detail/$row[information_id]/".url_title($row['information_title'])."");?>"><img src="<?= site_url("images/information/thumbs/$information_img");?>" alt="<?= $row['information_title'];?>" class="img-responsive "/></a>
+	    		    			<a href="<?= site_url("architecture/information_detail/$row[information_id]/".url_title($row['information_title'])."");?>"><img src="<?= site_url("images/information/thumbs/$information_img");?>" alt="<?= $row['information_title'];?>" class="img-responsive "/></a>
 								<h2><?= word_limiter($row['information_title'], 5);?></h2>
 								<p><?= word_limiter($row['information_detail'], 10);?></p>
 

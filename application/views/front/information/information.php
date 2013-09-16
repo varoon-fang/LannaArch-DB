@@ -37,7 +37,7 @@
 
 		   		          <div class="row h1Tab bgH1Zone">
 		   		              <span class="pull-left"><h1 class="pull-left"><?= $information_group_name;?></h1> </span>
-		   		              <span class="pull-right moreLink"><a href="<?= site_url("arch/information_more/$information_group_id/");?>">เพิ่มเติม &gt;&gt;</a></span>
+		   		              <span class="pull-right moreLink"><a href="<?= site_url("architecture/information_more/$information_group_id/");?>">เพิ่มเติม &gt;&gt;</a></span>
 		   		          </div><!--end row-->
 		   		          <br class="clearfix">
 
@@ -62,7 +62,7 @@
 	   		    	?>
    		    		<!--====== items ======-->
    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-   		    			<a href="<?= site_url("arch/information_detail/$information_id");?>"><img src="<?= site_url("images/information/thumbs/$information_img");?>" alt="<?= $information_name;?>" class="img-responsive "/></a>
+   		    			<a href="<?= site_url("architecture/information_detail/$information_id");?>"><img src="<?= site_url("images/information/thumbs/$information_img");?>" alt="<?= $information_name;?>" class="img-responsive "/></a>
    		    	        <h2><?= word_limiter($information_name, 5);?></h2>
    		    	        <p><?= word_limiter($information_detail, 10);?></p>
 
