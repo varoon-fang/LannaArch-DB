@@ -54,7 +54,7 @@
 		 <div class="row">
 			 <div class="text-center">
 			    <ul class="pagination">
-				     <li><?php echo $this->pagination->create_links(); ?></li>
+				     <?php echo $this->pagination->create_links(); ?>
 			    </ul>
 		  </div>
 		 </div><!--end row -->

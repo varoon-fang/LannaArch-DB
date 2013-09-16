@@ -40,7 +40,7 @@ class Architecture extends CI_Controller {
 		$config['uri_segment'] = 5;
 
 		$config['first_link'] = '«';
-		$config['first_tag_open'] = '<li class="prev page">';
+		$config['first_tag_open'] = '<li class="page">';
 		$config['first_tag_close'] = '</li>';
 
 		$config['last_link'] = '»';
@@ -52,7 +52,7 @@ class Architecture extends CI_Controller {
 		$config['next_tag_close'] = '</li>';
 
 		$config['prev_link'] = '‹';
-		$config['prev_tag_open'] = '<li class="prev page">';
+		$config['prev_tag_open'] = '<li class="page">';
 		$config['prev_tag_close'] = '</li>';
 
 		$config['cur_tag_open'] = '<li class="active"><a href="">';
@@ -135,7 +135,7 @@ class Architecture extends CI_Controller {
 		$config['uri_segment'] = 5;
 
 		$config['first_link'] = '«';
-		$config['first_tag_open'] = '<li class="prev page">';
+		$config['first_tag_open'] = '<li class="page">';
 		$config['first_tag_close'] = '</li>';
 
 		$config['last_link'] = '»';
@@ -147,7 +147,7 @@ class Architecture extends CI_Controller {
 		$config['next_tag_close'] = '</li>';
 
 		$config['prev_link'] = '‹';
-		$config['prev_tag_open'] = '<li class="prev page">';
+		$config['prev_tag_open'] = '<li class="page">';
 		$config['prev_tag_close'] = '</li>';
 
 		$config['cur_tag_open'] = '<li class="active"><a href="">';
@@ -191,7 +191,7 @@ class Architecture extends CI_Controller {
 		$config['uri_segment'] = 5;
 
 		$config['first_link'] = '«';
-		$config['first_tag_open'] = '<li class="prev page">';
+		$config['first_tag_open'] = '<li class=" page">';
 		$config['first_tag_close'] = '</li>';
 
 		$config['last_link'] = '»';
@@ -203,7 +203,7 @@ class Architecture extends CI_Controller {
 		$config['next_tag_close'] = '</li>';
 
 		$config['prev_link'] = '‹';
-		$config['prev_tag_open'] = '<li class="prev page">';
+		$config['prev_tag_open'] = '<li class=" page">';
 		$config['prev_tag_close'] = '</li>';
 
 		$config['cur_tag_open'] = '<li class="active"><a href="">';
@@ -233,6 +233,132 @@ class Architecture extends CI_Controller {
 		$this->load->view('front/temp/header', $this->data);
 		$this->load->view('front/information/information-detail', $data);
 		$this->load->view('front/temp/footer');
+	}
+
+//------------------------ Model --------------------------
+	function model()
+	{
+		$this->data['meta_title'] = "หุ่นจำลอง";
+
+
+		$get_page = $this->uri->segment(3);
+		$this->load->library("pagination");
+
+		$query = $this->db->get('models');
+		$count = $query->num_rows();
+
+		$config['base_url']=site_url()."architecture/model";
+		$config['per_page']=6;
+		$config['total_rows']=$count;
+		$config['page_query_string']= false;
+		$config['uri_segment'] = 3;
+
+		$config['first_link'] = '«';
+		$config['first_tag_open'] = '<li class=" page">';
+		$config['first_tag_close'] = '</li>';
+
+		$config['last_link'] = '»';
+		$config['last_tag_open'] = '<li class="next page">';
+		$config['last_tag_close'] = '</li>';
+
+		$config['next_link'] = '›';
+		$config['next_tag_open'] = '<li class="next page">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['prev_link'] = '‹';
+		$config['prev_tag_open'] = '<li class=" page">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['num_tag_open'] = '<li class="page">';
+		$config['num_tag_close'] = '</li>';
+
+
+		$this->pagination->initialize($config);
+
+		$data['rs_model']= $res = $this->db->select('*')->from('models')->order_by('models_id','desc')->limit($config['per_page'],$get_page)->get()->result_array();
+
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/model/model', $data);
+		$this->load->view('front/temp/footer');
+	}
+
+	function model_detail($id)
+	{
+		$sql = "select * from models where models_id='$id'";
+			$data['rs_model'] = $this->db->query($sql)->row_array();
+
+		$sql_album = "select * from models_album where models_id='$id' order by models_album_num asc ";
+			$data['rs_model_album'] = $this->db->query($sql_album)->result_array();
+
+		$this->load->view('front/model/model-detail', $data);
+
+	}
+
+//------------------------ 3D --------------------------
+	function hologram()
+	{
+		$this->data['meta_title'] = "ภาพ 3 มิติ";
+
+
+		$get_page = $this->uri->segment(3);
+		$this->load->library("pagination");
+
+		$query = $this->db->get('3d');
+		$count = $query->num_rows();
+
+		$config['base_url']=site_url()."architecture/hologram";
+		$config['per_page']=2;
+		$config['total_rows']=$count;
+		$config['page_query_string']= false;
+		$config['uri_segment'] = 3;
+
+		$config['first_link'] = '«';
+		$config['first_tag_open'] = '<li class=" page">';
+		$config['first_tag_close'] = '</li>';
+
+		$config['last_link'] = '»';
+		$config['last_tag_open'] = '<li class="next page">';
+		$config['last_tag_close'] = '</li>';
+
+		$config['next_link'] = '›';
+		$config['next_tag_open'] = '<li class="next page">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['prev_link'] = '‹';
+		$config['prev_tag_open'] = '<li class=" page">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['num_tag_open'] = '<li class="page">';
+		$config['num_tag_close'] = '</li>';
+
+
+		$this->pagination->initialize($config);
+
+		$data['rs_3d']= $res = $this->db->select('*')->from('3d')->order_by('3d_id','desc')->limit($config['per_page'],$get_page)->get()->result_array();
+
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/3d/index', $data);
+		$this->load->view('front/temp/footer');
+	}
+
+	function hologram_detail($id)
+	{
+		$sql = "select * from 3d where 3d_id='$id'";
+			$data['rs_3d'] = $this->db->query($sql)->row_array();
+
+		$sql_album = "select * from 3d_album where 3d_id='$id' order by 3d_album_num asc ";
+			$data['rs_3d_album'] = $this->db->query($sql_album)->result_array();
+
+		$this->load->view('front/3d/3d-detail', $data);
+
 	}
 
 }// end class

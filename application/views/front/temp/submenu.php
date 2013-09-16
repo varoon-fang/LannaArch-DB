@@ -34,7 +34,7 @@
                             	<li><a href="<?= site_url('architecture/information');?>">ข้อมูลทั่วไป</a></li>
                                 <li><a href="<?= site_url('architecture/structure');?>">แบบสถาปัตยกรรม</a></li>
                                 <li><a href="<?= site_url('architecture/model');?>">รูปหุ่นจำลอง</a></li>
-                                <li><a href="<?= site_url('architecture/tree_d');?>">ภาพ 3 มิติ</a></li>
+                                <li><a href="<?= site_url('architecture/hologram');?>">ภาพ 3 มิติ</a></li>
                             </ul>
                         </li>
                     </ul>
