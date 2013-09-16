@@ -62,7 +62,7 @@
 	   		    	?>
    		    		<!--====== items ======-->
    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-   		    			<a href="<?= site_url("gallery_detail/$gallery_id");?>"><img src="<?= site_url("images/gallery/resize/$gallery_img");?>" alt="<?= $gallery_name;?>" class="img-responsive "/></a>
+   		    			<a href="<?= site_url("gallery/detail/$gallery_id");?>"><img src="<?= site_url("images/gallery/resize/$gallery_img");?>" alt="<?= $gallery_name;?>" class="img-responsive "/></a>
    		    	        <h2><?= word_limiter($gallery_name, 5);?></h2>
    		    	        <p><?= word_limiter($gallery_detail, 10);?></p>
 

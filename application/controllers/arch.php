@@ -1,6 +1,6 @@
 <?php if ( !defined('BASEPATH')) exit('No direct script access allowed');
 
-class Structure extends CI_Controller {
+class Arch extends CI_Controller {
 	function __construct()
     {
         // Call the constructor
@@ -9,18 +9,18 @@ class Structure extends CI_Controller {
         	$this->load->helper('text');
     }
 
-	//------------------------ Gallery --------------------------
-	function index()
+	//------------------------ layout --------------------------
+	function structure()
 	{
-		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ห้องสมุดภาพ";
+		$this->data['meta_title'] = "ห้องสมุดสถาปัตยกรรม | แบบสถาปัตยกรรม";
 
-		// gallery group
-		$sql_gallery = "select * from gallery group by gallery_group desc";
-		$res_gallery=$this->db->query($sql_gallery);
-		$data['rs_gallery'] = $res_gallery->result_array();
+		// layout group
+		$sql_layout = "select * from layout_arch group by layout_group desc";
+		$res_layout=$this->db->query($sql_layout);
+		$data['rs_layout'] = $res_layout->result_array();
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-gallery', $data);
+		$this->load->view('front/layout', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -30,10 +30,10 @@ class Structure extends CI_Controller {
 		$get_page = $this->uri->segment(5);
 		$this->load->library("pagination");
 
-		$query = $this->db->get_where('gallery', array('gallery_group'=>$page_id));
+		$query = $this->db->get_where('layout', array('layout_group'=>$page_id));
 		$count = $query->num_rows();
 
-		$config['base_url']=site_url()."gallery/more/$page_id/page";
+		$config['base_url']=site_url()."layout/more/$page_id/page";
 		$config['per_page']=2;
 		$config['total_rows']=$count;
 		$config['page_query_string']= false;
@@ -64,19 +64,19 @@ class Structure extends CI_Controller {
 
 		$this->pagination->initialize($config);
 
-		$data['rs_gallery']= $res = $this->db->select('*')->from('gallery')->where('gallery_group', $page_id)->limit($config['per_page'],$get_page)->get()->result_array();
+		$data['rs_layout']= $res = $this->db->select('*')->from('layout')->where('layout_group', $page_id)->limit($config['per_page'],$get_page)->get()->result_array();
 			foreach($res as $fett){
-				$gallery_group= $fett['gallery_group'];
+				$layout_group= $fett['layout_group'];
 			}
-		// gallery group
-		$sql_group = "select * from gallery_group where gallery_group_id='$gallery_group'";
+		// layout group
+		$sql_group = "select * from layout_group where layout_group_id='$layout_group'";
 		$res_group=$this->db->query($sql_group)->row_array();
 		$data['res_group'] = $res_group;
 
-		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | $res_group[gallery_group_name]";
+		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | $res_group[layout_group_name]";
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-gallery-list', $data);
+		$this->load->view('front/library-layout-list', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -86,10 +86,10 @@ class Structure extends CI_Controller {
 		$get_page = $this->uri->segment(5);
 		$this->load->library("pagination");
 
-		$query = $this->db->get_where('gallery_album', array('gallery_id'=>$page_id));
+		$query = $this->db->get_where('layout_album', array('layout_id'=>$page_id));
 		$count = $query->num_rows();
 
-		$config['base_url']=site_url()."gallery_detail/$page_id/page";
+		$config['base_url']=site_url()."layout_detail/$page_id/page";
 		$config['per_page']=12;
 		$config['total_rows']=$count;
 		$config['page_query_string']= false;
@@ -120,23 +120,23 @@ class Structure extends CI_Controller {
 
 		$this->pagination->initialize($config);
 
-		$data['rs_gallery_album']= $res = $this->db->select('*')->from('gallery_album')->where('gallery_id', $page_id)->limit($config['per_page'],$get_page)->get()->result_array();
+		$data['rs_layout_album']= $res = $this->db->select('*')->from('layout_album')->where('layout_id', $page_id)->limit($config['per_page'],$get_page)->get()->result_array();
 
 
-		// gallery
-		$sql_gallery = "select * from gallery where gallery_id='$page_id'";
-		$res_gallery = $this->db->query($sql_gallery)->row_array();
-		$data['res_gallery'] = $res_gallery;
+		// layout
+		$sql_layout = "select * from layout where layout_id='$page_id'";
+		$res_layout = $this->db->query($sql_layout)->row_array();
+		$data['res_layout'] = $res_layout;
 
-		// gallery group
-		$sql_group = "select * from gallery_group where gallery_group_id='$res_gallery[gallery_group]'";
+		// layout group
+		$sql_group = "select * from layout_group where layout_group_id='$res_layout[layout_group]'";
 		$res_group=$this->db->query($sql_group)->row_array();
 		$data['res_group'] = $res_group;
 
-		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ". $res_gallery['gallery_title'] ."";
+		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ". $res_layout['layout_title'] ."";
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-gallery-detail', $data);
+		$this->load->view('front/library-layout-detail', $data);
 		$this->load->view('front/temp/footer');
 	}
 

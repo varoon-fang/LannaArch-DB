@@ -18,7 +18,7 @@ class Library extends CI_Controller {
 		$data['rs_ebook'] = $res_book->result_array();
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-book', $data);
+		$this->load->view('front/library/library-book', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -75,7 +75,7 @@ $config['first_link'] = '«';
 		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | $row[ebook_group_name]";
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-book-list', $data);
+		$this->load->view('front/library/library-book-list', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -103,7 +103,7 @@ $config['first_link'] = '«';
 			$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ".$this->uri->segment(4)."";
 
 			$this->load->view('front/temp/header', $this->data);
-			$this->load->view('front/library-book-detail', $data);
+			$this->load->view('front/library/library-book-detail', $data);
 			$this->load->view('front/temp/footer');
 	}
 

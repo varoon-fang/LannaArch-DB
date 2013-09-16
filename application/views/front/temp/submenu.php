@@ -31,7 +31,8 @@
                         <li <? if($this->uri->segment(1)=="arch"){ echo 'class="active"';};?> class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ห้องสมุดสถาปัตยกรรม <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= site_url('arch/architecture');?>">แบบสถาปัตยกรรม</a></li>
+                            	<li><a href="<?= site_url('arch/information');?>">ข้อมูลทัวไป</a></li>
+                                <li><a href="<?= site_url('arch/structure');?>">แบบสถาปัตยกรรม</a></li>
                                 <li><a href="<?= site_url('arch/model');?>">รูปหุ่นจำลอง</a></li>
                                 <li><a href="<?= site_url('arch/tree_d');?>">ภาพ 3 มิติ</a></li>
                             </ul>

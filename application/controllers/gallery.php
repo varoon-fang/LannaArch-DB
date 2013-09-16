@@ -20,7 +20,7 @@ class Gallery extends CI_Controller {
 		$data['rs_gallery'] = $res_gallery->result_array();
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-gallery', $data);
+		$this->load->view('front/library/library-gallery', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -76,7 +76,7 @@ class Gallery extends CI_Controller {
 		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | $res_group[gallery_group_name]";
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-gallery-list', $data);
+		$this->load->view('front/library/library-gallery-list', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -136,7 +136,7 @@ class Gallery extends CI_Controller {
 		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ". $res_gallery['gallery_title'] ."";
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/library-gallery-detail', $data);
+		$this->load->view('front/library/library-gallery-detail', $data);
 		$this->load->view('front/temp/footer');
 	}
 
