@@ -27,7 +27,7 @@
                             </ul>
                         </li>
                         <li <? if($this->uri->segment(1)=="art"){ echo 'class="active"';};?> ><a href="<?= site_url('art');?>">ศิลปกรรม</a></li>
-                        <li <? if($this->uri->segment(1)=="lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('lanna');?>">ข้อมูลล้านนา</a></li>
+                        <li <? if($this->uri->segment(1)=="information_lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('lanna');?>">ข้อมูลล้านนา</a></li>
                         <li <? if($this->uri->segment(1)=="architecture"){ echo 'class="active"';};?> class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ห้องสมุดสถาปัตยกรรม <b class="caret"></b></a>
                             <ul class="dropdown-menu">

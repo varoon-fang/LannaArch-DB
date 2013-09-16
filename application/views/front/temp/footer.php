@@ -10,11 +10,11 @@
       		     		 <h3>ผังเว็บไซต์</h3>
 		      		     <ul class=" list-unstyled">
 
-		      		         <li ><a href="#">หน้าหลัก</a></li>
-		      		         <li><a href="#">ประวัติความเป็นมา</a></li>
-		      		         <li><a href="#">เกี่ยวกับเรา</a></li>
-		      		         <li><a href="#">กิจกรรม</a></li>
-		      		         <li><a href="#">ติดต่อเรา</a></li>
+		      		         <li><a href="<?= site_url();?>">หน้าหลัก</a></li>
+		      		         <li><a href="<?= site_url("history");?>">ประวัติความเป็นมา</a></li>
+		      		         <li><a href="<?= site_url("about");?>">เกี่ยวกับเรา</a></li>
+		      		         <li><a href="<?= site_url("activity");?>">กิจกรรม</a></li>
+		      		         <li><a href="<?= site_url("contact");?>">ติดต่อเรา</a></li>
 
 		      		      </ul>
 
@@ -30,12 +30,12 @@
             		     	<h3>ห้องสมุดออนไลน์</h3>
       		      		     <ul class=" list-unstyled">
 
-      		      		         <li><a href="#">ห้องสมุดหนังสือ</a></li>
-      		      		         <li><a href="#">ห้องสมุดภาพ</a></li>
+      		      		         <li><a href="<?= site_url("library");?>">ห้องสมุดหนังสือ</a></li>
+      		      		         <li><a href="<?= site_url("gallery");?>">ห้องสมุดภาพ</a></li>
       		      		         <li><a href="#">ห้องสมุดสถาปัตยกรรม</a></li>
       		      		         <li><a href="#">วัฒนธรรมและประเพณี</a></li>
-      		      		         <li><a href="#">ศิลปกรรม</a></li>
-      		      		         <li><a href="#">ข้อมูลล้านนา</a></li>
+      		      		         <li><a href="<?= site_url("art");?>">ศิลปกรรม</a></li>
+      		      		         <li><a href="<?= site_url("information_lanna");?>">ข้อมูลล้านนา</a></li>
 
       		      		      </ul>
 
