@@ -36,12 +36,12 @@
 		     <nav >
 
 		       <ul class="nav nav-justified  ">
-		         <li class="active"><a href="landingpage.html">หน้าหลัก</a></li>
-		         <li><a href="history.html">ประวัติความเป็นมา</a></li>
-		         <li><a href="aboutUs.html">เกี่ยวกับเรา</a></li>
-		         <li ><a href="library-book.html" >ห้องสมุดออนไลน์ </a></li>
-		         <li><a href="activity.html">กิจกรรม</a></li>
-		         <li><a href="contact.html">ติดต่อเรา</a></li>
+		         <li <? if($this->uri->segment(1)==""){ echo 'class="active"';};?>><a href="<?= site_url();?>">หน้าหลัก </a></li>
+		         <li <? if($this->uri->segment(1)=="history"){ echo 'class="active"';};?> ><a href="<?= site_url("history");?>">ประวัติความเป็นมา </a></li>
+		         <li <? if($this->uri->segment(1)=="about"){ echo 'class="active"';};?> ><a href="<?= site_url("about");?>">เกี่ยวกับเรา</a></li>
+		         <li <? if($this->uri->segment(1)=="library"){ echo 'class="active"';};?> ><a href="<?= site_url("library");?>" >ห้องสมุดออนไลน์ </a></li>
+		         <li <? if($this->uri->segment(1)=="activity"){ echo 'class="active"';};?> ><a href="<?= site_url("activity");?>">กิจกรรม</a></li>
+		         <li <? if($this->uri->segment(1)=="contact"){ echo 'class="active"';};?> ><a href="<?= site_url("contact");?>">ติดต่อเรา</a></li>
 		       </ul>
 		                </nav>
 		     </div><!-- end masthead-->

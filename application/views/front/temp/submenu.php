@@ -5,10 +5,10 @@
                 <nav class="subMenu">
 
                     <ul class="nav navbar-nav  ">
-                        <li ><a href="library-landpages-more.html">ห้องสมุดหนังสือ</a></li>
-                        <li><a href="library-Picmore.html">ห้องสมุดภาพ</a></li>
+                        <li <? if($this->uri->segment(1)=="library" AND $this->uri->segment(2)==""){ echo 'class="active"';};?>><a href="<?= site_url('library');?>">ห้องสมุดหนังสือ</a></li>
+                        <li <? if($this->uri->segment(2)=="gallery" OR $this->uri->segment(2)=="gallery_more" OR $this->uri->segment(2)=="gallery_detail") { echo 'class="active"';};?> ><a href="<?= site_url('library/gallery');?>">ห้องสมุดภาพ</a></li>
 
-                        <li class="dropdown active">
+                        <li class="dropdown ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">วัฒนธรรมและประเพณี <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="library-culture-jan1.html">เดือนมกราคม</a></li>
@@ -26,14 +26,14 @@
 
                             </ul>
                         </li>
-                        <li><a href="library-informationMore1.html">ศิลปกรรม</a></li>
-                        <li><a href="library-informationMore2.html">ข้อมูลล้านนา</a></li>
-                        <li class="dropdown">
+                        <li <? if($this->uri->segment(2)=="art"){ echo 'class="active"';};?> ><a href="<?= site_url('library/art');?>">ศิลปกรรม</a></li>
+                        <li <? if($this->uri->segment(1)=="lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('library/lanna');?>">ข้อมูลล้านนา</a></li>
+                        <li <? if($this->uri->segment(2)=="library_arch"){ echo 'class="active"';};?> class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ห้องสมุดสถาปัตยกรรม <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="library-Design-more.html">แบบสถาปัตยกรรม</a></li>
-                                <li><a href="library-Model.html">รูปหุ่นจำลอง</a></li>
-                                <li><a href="library-3d.html">ภาพ 3 มิติ</a></li>
+                                <li><a href="<?= site_url('library/architecture');?>">แบบสถาปัตยกรรม</a></li>
+                                <li><a href="<?= site_url('library/model');?>">รูปหุ่นจำลอง</a></li>
+                                <li><a href="<?= site_url('library/tree_d');?>">ภาพ 3 มิติ</a></li>
                             </ul>
                         </li>
                     </ul>
