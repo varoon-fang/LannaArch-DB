@@ -104,6 +104,135 @@ class Arch extends CI_Controller {
 		$this->load->view('front/arch/structure-detail', $data);
 		$this->load->view('front/temp/footer');
 	}
+//------------------------ information --------------------------
+	function information()
+	{
+		$this->data['meta_title'] = "ข้อมูลทั่วไป";
 
+		// information group
+		$sql_information = "select * from information group by information_group desc";
+		$res_information=$this->db->query($sql_information);
+		$data['rs_information'] = $res_information->result_array();
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/information/information', $data);
+		$this->load->view('front/temp/footer');
+	}
+
+	function information_more()
+	{
+		$page_id = $this->uri->segment(3);
+		$get_page = $this->uri->segment(5);
+		$this->load->library("pagination");
+
+		$query = $this->db->get_where('information', array('information_group'=>$page_id));
+		$count = $query->num_rows();
+
+		$config['base_url']=site_url()."information/more/$page_id/page";
+		$config['per_page']=12;
+		$config['total_rows']=$count;
+		$config['page_query_string']= false;
+		$config['uri_segment'] = 5;
+
+		$config['first_link'] = '«';
+		$config['first_tag_open'] = '<li class="prev page">';
+		$config['first_tag_close'] = '</li>';
+
+		$config['last_link'] = '»';
+		$config['last_tag_open'] = '<li class="next page">';
+		$config['last_tag_close'] = '</li>';
+
+		$config['next_link'] = '›';
+		$config['next_tag_open'] = '<li class="next page">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['prev_link'] = '‹';
+		$config['prev_tag_open'] = '<li class="prev page">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['num_tag_open'] = '<li class="page">';
+		$config['num_tag_close'] = '</li>';
+
+
+		$this->pagination->initialize($config);
+
+		$data['rs_information']= $res = $this->db->select('*')->from('information')->where('information_group', $page_id)->limit($config['per_page'],$get_page)->get()->result_array();
+			foreach($res as $fett){
+				$information_group= $fett['information_group'];
+			}
+		// information group
+		$sql_group = "select * from information_group where information_group_id='$information_group'";
+		$res_group=$this->db->query($sql_group)->row_array();
+		$data['res_group'] = $res_group;
+
+		$this->data['meta_title'] = "กิจกรรม | $res_group[information_group_name]";
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/information/information-list', $data);
+		$this->load->view('front/temp/footer');
+	}
+
+	function information_detail()
+	{
+		$page_id = $this->uri->segment(3);
+		$get_page = $this->uri->segment(5);
+		$this->load->library("pagination");
+
+		$query = $this->db->get_where('information_album', array('information_id'=>$page_id));
+		$count = $query->num_rows();
+
+		$config['base_url']=site_url()."information_detail/$page_id/page";
+		$config['per_page']=12;
+		$config['total_rows']=$count;
+		$config['page_query_string']= false;
+		$config['uri_segment'] = 5;
+
+		$config['first_link'] = '«';
+		$config['first_tag_open'] = '<li class="prev page">';
+		$config['first_tag_close'] = '</li>';
+
+		$config['last_link'] = '»';
+		$config['last_tag_open'] = '<li class="next page">';
+		$config['last_tag_close'] = '</li>';
+
+		$config['next_link'] = '›';
+		$config['next_tag_open'] = '<li class="next page">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['prev_link'] = '‹';
+		$config['prev_tag_open'] = '<li class="prev page">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['num_tag_open'] = '<li class="page">';
+		$config['num_tag_close'] = '</li>';
+
+
+		$this->pagination->initialize($config);
+
+		$data['rs_information_album']= $res = $this->db->select('*')->from('information_album')->where('information_id', $page_id)->limit($config['per_page'],$get_page)->get()->result_array();
+
+
+		// information
+		$sql_information = "select * from information where information_id='$page_id'";
+		$res_information = $this->db->query($sql_information)->row_array();
+		$data['res_information'] = $res_information;
+
+		// information group
+		$sql_group = "select * from information_group where information_group_id='$res_information[information_group]'";
+		$res_group=$this->db->query($sql_group)->row_array();
+		$data['res_group'] = $res_group;
+
+		$this->data['meta_title'] = " กิจกรรม | ". $res_information['information_title'] ."";
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/information/information-detail', $data);
+		$this->load->view('front/temp/footer');
+	}
 
 }// end class

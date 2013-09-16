@@ -6,6 +6,9 @@
 ================================================== -->
         <?= $this->load->view('front/temp/menu');?>
 
+		<!--======sub Nav=======-->
+		 <?= $this->load->view('front/temp/submenu');?>
+
         <div class="container bgContentZone">
 
         <!--=========Content====================-->
@@ -15,7 +18,7 @@
 
 	   <div class="content-section">
 	     		<div class="row h1Tab bgH1Zone">
-	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("activity");?>">กิจกรรม</a> &gt; <?= $res_group['activity_group_name'];?></h1> </span>
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("arch/information");?>">ข้อมูลทั่วไป</a> &gt; <?= $res_group['information_group_name'];?></h1> </span>
 	     		</div><!--end row-->
 
       <br class="clearfix">
@@ -29,21 +32,21 @@
 	    	 <div class="content-section">
 	    		    	<div class="row ">
 							<?php
-		   		    			foreach($rs_activity as $row){
-		   		    				 // activity img
-									$book_img = "select * from activity_album where activity_id='$row[activity_id]' order by activity_album_num asc limit 1 ";
+		   		    			foreach($rs_information as $row){
+		   		    				 // information img
+									$book_img = "select * from information_album where information_id='$row[information_id]' order by information_album_num asc limit 1 ";
 									$res_book_img=$this->db->query($book_img)->result_array();
 										foreach($res_book_img as $rows)
 										{
-											$activity_img = $rows['activity_album_name'];
+											$information_img = $rows['information_album_name'];
 										}
 		   		    		?>
 
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("activity/detail/$row[activity_id]/".url_title($row['activity_title'])."");?>"><img src="<?= site_url("images/activity/thumbs/$activity_img");?>" alt="<?= $row['activity_title'];?>" class="img-responsive "/></a>
-								<h2><?= word_limiter($row['activity_title'], 5);?></h2>
-								<p><?= word_limiter($row['activity_detail'], 10);?></p>
+	    		    			<a href="<?= site_url("arch/information_detail/$row[information_id]/".url_title($row['information_title'])."");?>"><img src="<?= site_url("images/information/thumbs/$information_img");?>" alt="<?= $row['information_title'];?>" class="img-responsive "/></a>
+								<h2><?= word_limiter($row['information_title'], 5);?></h2>
+								<p><?= word_limiter($row['information_detail'], 10);?></p>
 
 	    		    		</div><!-- /.col-lg-3 -->
 							<? }?>
