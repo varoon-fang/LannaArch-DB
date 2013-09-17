@@ -35,7 +35,7 @@
 
 	   		    			   		    	        <img src="<?= site_url("images/layout_arch/thumbs/$res_img[layout_album_name]");?>" alt="<?= $res_layout['layout_title'];?>" class="img-responsive "/>
 	   		    			   		    	        <p class="pull-right">
-	   		    			   		    	          <a href="libary-book/book-example.html" target="_blank"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-eye-open"></span> ดูแบบ</button></a>
+	   		    			   		    	          <a href="<?= site_url("architecture/structure_read/$res_layout[layout_id]");?>" target="_blank"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-eye-open"></span> ดูแบบ</button></a>
 	   		    			   		    	        <p>
 
 	   		    			   		    </div><!-- /.col-lg-2 -->

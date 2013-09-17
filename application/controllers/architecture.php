@@ -104,6 +104,18 @@ class Architecture extends CI_Controller {
 		$this->load->view('front/arch/structure-detail', $data);
 		$this->load->view('front/temp/footer');
 	}
+
+	function structure_read()
+	{
+		$read_id = $this->uri->segment(3);
+
+		// layout img
+			$layout_img = "select * from layout_album where layout_id='$read_id' order by layout_album_num asc ";
+			$data['rs_layout_img'] = $res_book_img=$this->db->query($layout_img)->result_array();
+
+
+			$this->load->view('front/arch/read_arch', $data);
+	}
 //------------------------ information --------------------------
 	function information()
 	{

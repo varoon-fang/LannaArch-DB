@@ -87,7 +87,7 @@
 							    <div class="thumbnail">
 							    <img src="<?= site_url("images/layout_arch/resize/$name_img");?>" alt="<?=$name_img;?>">
 								    <div class="caption">
-										<p align="center"><a href="<?= site_url("admin/layout/delete_image/$id_img");?>" onclick="return confirm('Delete?')" class="btn btn-danger btn-block">Delete</a></p>
+										<p align="center"><a href="<?= site_url("admin/layout_arch/delete_image/$id_img");?>" onclick="return confirm('Delete?')" class="btn btn-danger btn-block">Delete</a></p>
 								    </div>
 							    </div>
 						    </li>

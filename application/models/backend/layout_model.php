@@ -327,7 +327,7 @@ function delete_cate($id)
 
 	    if($this->input->post('upload_img')!=NULL){
         $upload_conf = array(
-            'upload_path'   => realpath('images/layout/'),
+            'upload_path'   => realpath('images/layout_arch/'),
             'allowed_types' => 'gif|jpg|png',
             'quality' 		=> '80',
             'max_size'      => '0',
