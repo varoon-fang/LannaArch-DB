@@ -62,7 +62,7 @@
 	   		    	?>
    		    		<!--====== items ======-->
    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-   		    			<a href="<?= site_url("arch/structure_detail/$layout_id");?>"><img src="<?= site_url("images/layout_arch/thumbs/$layout_img");?>" alt="<?= $layout_name;?>" class="img-responsive "/></a>
+   		    			<a href="<?= site_url("architecture/structure_detail/$layout_id");?>"><img src="<?= site_url("images/layout_arch/thumbs/$layout_img");?>" alt="<?= $layout_name;?>" class="img-responsive "/></a>
    		    	        <h2><?= word_limiter($layout_name, 5);?></h2>
    		    	        <p><?= word_limiter($layout_detail, 10);?></p>
 
