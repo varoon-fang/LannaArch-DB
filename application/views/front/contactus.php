@@ -1,3 +1,11 @@
+<!-- auto close alert -->
+<script>
+	window.setTimeout(function() {
+    $("#alert-message").fadeTo(1000, 0).slideUp(1000, function(){
+        $(this).remove();
+    });
+}, 2000);
+</script>
 <!-- NAVBAR
 ================================================== -->
   <body class="bgBodyZone">
@@ -15,23 +23,24 @@
 		  <h1>ติดต่อเรา</h1>
 		 <div class="row">
 		  <div class="col-xs-8">
-			  <form role="form">
+		  		<? echo $this->session->flashdata('feedback');?>
+			  <?= form_open('contact');?>
 			    <div class="form-group">
 			      <label for="exampleInputEmail1">ชื่อ </label>
-			      <input type="email" class="form-control" id="NameContact" placeholder="Enter email">
+			      <input type="text" name="name" class="form-control" id="NameContact" placeholder="กรอกชื่อ...">
 			    </div>
 			    <div class="form-group">
 			      <label for="exampleInputPassword1">หัวข้อ</label>
-			      <input type="password" class="form-control" id="toppicContact" placeholder="Password">
+			      <input type="text" class="form-control" id="toppicContact" name="title" placeholder="กรอกหัวข้อ...">
 			    </div>
 			    <div class="form-group">
-			      <label for="exampleInputPassword1">หัวข้อ</label>
-			      <textarea id="bodyContact" class="form-control" rows="3"></textarea>
+			      <label for="exampleInputPassword1">รายละเอียด</label>
+			      <textarea id="bodyContact" class="form-control" name="detail" rows="3"></textarea>
 			    </div>
 			    <div class="form-group">
 
 			    </div>
-			    <button type="submit" class="btn btn-default">Submit</button>
+			    <input type="submit" name="send" class="btn btn-default" value="Send">
 			  </form>
 		  </div>
 		  <div class="col-xs-4">
