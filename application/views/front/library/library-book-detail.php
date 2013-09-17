@@ -16,7 +16,7 @@
 	  <section id="subContent" >
 	  <br>
 	  <ol class="breadcrumb">
-	    <li><a href="<?= site_url("libarary");?>">ห้องสมุดหนังสือ</a></li>
+	    <li><a href="<?= site_url("library");?>">ห้องสมุดหนังสือ</a></li>
 	    <li><a href="<?= site_url("library/more/$rs_ebook_group[ebook_group_id]");?>"><?= $rs_ebook_group['ebook_group_name'];?></a></li>
 	    <li class="active"><?= $rs_ebook['ebook_title'];?></li>
 	  </ol>
