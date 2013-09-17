@@ -31,7 +31,12 @@
 
 		   		    	        <img src="<?= site_url("images/ebook/img/$rs_ebook_img[ebook_album_name]");?>" class="img-responsive" />
 		   		    	        <p class="pull-right">
-		   		    	          <a href="libary-book/book-example.html" target="_blank"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-eye-open"></span> อ่านหนังสือ</button></a>
+		   		    	            <a href="<?= site_url("library/read_book/$rs_ebook[ebook_id]");?>" target="_blank">
+			   		    	          	<button type="button" class="btn btn-default btn-lg">
+			   		    	          		<span class="glyphicon glyphicon-eye-open"></span> อ่านหนังสือ
+		   		    	          		</button>
+			    	          		</a>
+
 		   		    	        <p>
 
 		   		    </div><!-- /.col-lg-2 -->

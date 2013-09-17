@@ -107,6 +107,21 @@ $config['first_link'] = '«';
 			$this->load->view('front/temp/footer');
 	}
 
+	function read_book($ebook_id)
+	{
+		$ebook_id = $this->uri->segment(3);
+		// ebook
+		$sql_book = "select * from ebook where ebook_id='$ebook_id'";
+			$res_book=$this->db->query($sql_book);
+			$data['rs_ebook'] = $res_book->row_array();
+
+		// ebook img
+			$book_img = "select * from ebook_album where ebook_id='$ebook_id' order by ebook_album_num asc ";
+			$data['rs_ebook_img'] = $res_book_img=$this->db->query($book_img)->result_array();
+
+
+			$this->load->view('front/library/read_book', $data);
+	}
 
 
 
