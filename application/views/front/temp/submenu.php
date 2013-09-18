@@ -11,7 +11,7 @@
                         <li class="dropdown ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">วัฒนธรรมและประเพณี <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="library-culture-jan1.html">เดือนมกราคม</a></li>
+                                <li><a href="<?= site_url("society");?>">เดือนมกราคม</a></li>
                                 <li><a href="library-culture-feb1.html">เดือนกุมภาพันธ์</a></li>
                                 <li><a href="library-culture-mar1.html">เดือนมีนาคม</a></li>
                                 <li><a href="library-culture-apr1.html">เดือนเมษายน</a></li>

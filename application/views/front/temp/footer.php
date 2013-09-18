@@ -32,8 +32,8 @@
 
       		      		         <li><a href="<?= site_url("library");?>">ห้องสมุดหนังสือ</a></li>
       		      		         <li><a href="<?= site_url("gallery");?>">ห้องสมุดภาพ</a></li>
-      		      		         <li><a href="#">ห้องสมุดสถาปัตยกรรม</a></li>
-      		      		         <li><a href="#">วัฒนธรรมและประเพณี</a></li>
+      		      		         <li><a href="<?= site_url("architecture/information");?>">ห้องสมุดสถาปัตยกรรม</a></li>
+      		      		         <li><a href="<?= site_url("society");?>">วัฒนธรรมและประเพณี</a></li>
       		      		         <li><a href="<?= site_url("art");?>">ศิลปกรรม</a></li>
       		      		         <li><a href="<?= site_url("information_lanna");?>">ข้อมูลล้านนา</a></li>
 
