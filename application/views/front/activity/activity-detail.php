@@ -27,15 +27,6 @@
       <br />
       </div>
 
-     <!--
- <div class="bookLibrarySearch well bgNavZoneSub">
-
-      <h4><span class="pull-left">ชื่อภาพ <?= $res_activity['activity_title'];?></span></h4>
-      <h4><span class="pull-right">ที่มาของภาพ : <?= $res_activity['activity_from'];?></span></h4>
-      <br />
-      </div>
--->
-
 	      <section id="subContent" >
 	    	  <br class="clearfix">
 		    	 <div class="content-section">
@@ -46,7 +37,7 @@
 						 	?>
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("images/activity/resize/$row[activity_album_name]");?>" class="fancybox">
+	    		    			<a href="<?= site_url("images/activity/resize/$row[activity_album_name]");?>" data-fancybox-group="activity" class="fancybox">
 	    		    				<img src="<?= site_url("images/activity/thumbs/$row[activity_album_name]");?>" class="img-responsive piclist"/>
     		    				</a>
 	    		    		</div><!-- /.col-lg-3 -->
