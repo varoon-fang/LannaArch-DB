@@ -19,29 +19,38 @@
 			 <h3>ค้นหา</h3>
 
 			 <form class="form-inline" role="form">
-			  	<input class="form-control" id="focusedInput" type="text" value="This is focused...">
+			  	<input class="form-control" id="focusedInput" type="text" placeholder="กรุณากรอกรายละเอียด...">
 
 			  	<div class="form-group ">
 			  	    <label for="exampleInputEmail1">หมวดหมู่</label>
-			  	    <select class="form-control ">
-			  	      <option>หนังสือ</option>
-			  	      <option>2</option>
-			  	      <option>3</option>
-			  	      <option>4</option>
-			  	      <option>5</option>
+			  	    <select class="form-control" name="category">
+			  	      <option value="">เลือกหมวดหมู่</option>
+			  	      <?php foreach($list_cate->result_array() as $row){ ?>
+			  	      <option value="<?= $row['ebook_group_id'];?>"><?= $row['ebook_group_name'];?></option>
+			  	      <? }?>
 			  	    </select>
 			  	  </div>
 
-
+			  	  <div class="form-group ">
+			  	    <label for="exampleInputEmail1">คณะ ฯ</label>
+			  	    <select class="form-control" name="major">
+			  	      <option value="">เลือกคณะ</option>
+			  	      <?php foreach($list_major as $rows){ ?>
+			  	      <option value="<?= $rows['ebook_major'];?>"><?= $rows['ebook_major'];?></option>
+			  	      <? }?>
+			  	    </select>
+			  	  </div>
 
 			  	    <div class="form-group">
-			  	        <label for="exampleInputEmail1">วันที่</label>
-			  	        <select class="form-control">
-			  	          <option>หนังสือ</option>
-			  	          <option>2</option>
-			  	          <option>3</option>
-			  	          <option>4</option>
-			  	          <option>5</option>
+			  	        <label for="exampleInputEmail1">ปีที่วิจัย</label>
+			  	        <select class="form-control" name="year">
+			  	          <option value="">เลือกปีที่วิจัย</option>
+			  	          <?php
+			    	    		$now=date("Y");
+			    	    		for($i=$now;$i>=2000;$i--){
+				    	    ?>
+				    	    	<option value="<?= $i;?>"><?= $i;?></option>
+			    	    	<? }?>
 			  	        </select>
 			  	      </div>
 
@@ -50,11 +59,14 @@
 			  	          <div class="form-inline">
 
 					  	      <div class="checkbox">
-					  	          <label>
-					  	            <input type="checkbox"> ผู้แต่ง
+				  	      		  <label>
+					  	            <input type="radio" value="0" checked="checked" name="detail"> ทั้งหมด
 					  	          </label>
 					  	          <label>
-					  	            <input type="checkbox"> อ้างอิง
+					  	            <input type="radio" value="1" name="detail"> ผู้วิจัย
+					  	          </label>
+					  	          <label>
+					  	            <input type="radio" value="2" name="detail"> เรื่อง
 					  	          </label>
 					  	        </div>
 

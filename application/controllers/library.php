@@ -7,11 +7,16 @@ class Library extends CI_Controller {
         parent::__construct();
 
         	$this->load->helper('text');
+        	$this->load->model('backend/ebook_model');
+        	$this->load->model('frontend/search');
     }
 
 	function index()
 	{
+
 		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ห้องหนังสือ";
+		$data['list_cate'] = $this->ebook_model->list_cate();
+		$data['list_major'] = $this->search->major();
 		// ebook group
 		$sql_book = "select * from ebook group by ebook_group desc";
 		$res_book=$this->db->query($sql_book);
