@@ -19,7 +19,7 @@
 			 <h3>ค้นหา</h3>
 
 			 <form class="form-inline" role="form">
-			  	<input class="form-control" id="focusedInput" type="text" placeholder="กรุณากรอกรายละเอียด...">
+			  	<input class="form-control" id="focusedInput" name="title" type="text" placeholder="กรุณากรอกรายละเอียด...">
 
 			  	<div class="form-group ">
 			  	    <label for="exampleInputEmail1">หมวดหมู่</label>

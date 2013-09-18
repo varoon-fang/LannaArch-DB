@@ -41,7 +41,7 @@ class Library extends CI_Controller {
 		$config['total_rows']=$count;
 		$config['uri_segment'] = 5;
 
-$config['first_link'] = '«';
+		$config['first_link'] = '«';
 		$config['first_tag_open'] = '<li class="prev page">';
 		$config['first_tag_close'] = '</li>';
 
@@ -81,6 +81,16 @@ $config['first_link'] = '«';
 
 		$this->load->view('front/temp/header', $this->data);
 		$this->load->view('front/library/library-book-list', $data);
+		$this->load->view('front/temp/footer');
+	}
+
+	function search_book()
+	{
+		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ค้นหาหนังสือ";
+		$data = $this->search->search_more();
+
+		$this->load->view('front/temp/header', $this->data);
+		$this->load->view('front/library/search-book-list', $data);
 		$this->load->view('front/temp/footer');
 	}
 
