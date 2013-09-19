@@ -19,7 +19,7 @@
 
 		 <div class="content-section">
 		   		<div class="row h1Tab bgH1Zone">
-	                <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("library");?>">ห้องสมุดออนไลน์</a>  &gt; ค้นหาหนังสือ</h1></span>
+	                <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("library");?>">ห้องสมุดออนไลน์</a>  &gt; ค้นหาหนังสือ &gt;<?= $search;?> </h1></span>
    		        </div>
    		        <br class="clearfix">
    		    	<div class="row ">

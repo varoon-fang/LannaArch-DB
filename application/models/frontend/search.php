@@ -33,7 +33,7 @@ class Search extends CI_Model {
 		$sql_pages .= "select * from ebook where 1 ";
 
 		// search by researcher
-		if($detail = '1'){
+		if($detail == '1'){
 
 			if($title=="0" OR $title=="" ){
 
@@ -43,7 +43,7 @@ class Search extends CI_Model {
 			}
 
 		// search by title
-		}elseif($detail = '2'){
+		}elseif($detail == '2'){
 
 			if($title=="0" OR $title=="" ){
 
@@ -120,7 +120,7 @@ class Search extends CI_Model {
 
 		// search database
 		 // search by researcher
-		if($detail = '1'){
+		if($detail=='1'){
 
 			if($title=="0" OR $title=="" ){
 
@@ -130,7 +130,7 @@ class Search extends CI_Model {
 			}
 
 		// search by title
-		}elseif($detail = '2'){
+		}elseif($detail=='2'){
 
 			if($title=="0" OR $title=="" ){
 
@@ -145,8 +145,9 @@ class Search extends CI_Model {
 			if($title=="0" OR $title=="" ){
 
 			}else{
-				$this->db->like('ebook_researcher' , $title);
 				$this->db->like('ebook_title' , $title);
+				$this->db->or_like('ebook_researcher', $title);
+
 			}
 		}
 			// all search

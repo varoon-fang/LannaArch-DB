@@ -29,6 +29,7 @@ class Library extends CI_Controller {
 
 	function more()
 	{
+
 		$page_id = $this->uri->segment(3);
 		$get_page = $this->uri->segment(5);
 		$this->load->library("pagination");
@@ -78,6 +79,9 @@ class Library extends CI_Controller {
 			}
 
 		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | $row[ebook_group_name]";
+
+		$data['list_cate'] = $this->ebook_model->list_cate();
+		$data['list_major'] = $this->search->major();
 
 		$this->load->view('front/temp/header', $this->data);
 		$this->load->view('front/library/library-book-list', $data);

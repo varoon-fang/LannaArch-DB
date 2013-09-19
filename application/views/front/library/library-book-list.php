@@ -15,56 +15,7 @@
 
 	  <section id="subContent" >
 		 <br class="clearfix">
-		 <div class="bookLibrarySearch well bgNavZoneSub">
-			 <h3>ค้นหา</h3>
-
-			 <form class="form-inline" role="form">
-			  	<input class="form-control" id="focusedInput" type="text" value="This is focused...">
-
-			  	<div class="form-group ">
-			  	    <label for="exampleInputEmail1">หมวดหมู่</label>
-			  	    <select class="form-control ">
-			  	      <option>หนังสือ</option>
-			  	      <option>2</option>
-			  	      <option>3</option>
-			  	      <option>4</option>
-			  	      <option>5</option>
-			  	    </select>
-			  	  </div>
-
-
-			  	    <div class="form-group">
-			  	        <label for="exampleInputEmail1">วันที่</label>
-			  	        <select class="form-control">
-			  	          <option>หนังสือ</option>
-			  	          <option>2</option>
-			  	          <option>3</option>
-			  	          <option>4</option>
-			  	          <option>5</option>
-			  	        </select>
-			  	      </div>
-
-			  	      	      <div class=" form-group ">
-
-			  	      			  	          <div class="form-inline">
-
-			  	      					  	      <div class="checkbox">
-			  	      					  	          <label>
-			  	      					  	            <input type="checkbox"> ผู้แต่ง
-			  	      					  	          </label>
-			  	      					  	          <label>
-			  	      					  	            <input type="checkbox"> อ้างอิง
-			  	      					  	          </label>
-			  	      					  	        </div>
-
-			  	      			  	         </div>
-
-			  	                            </div>
-
-
-			  	      <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>&nbsp;ค้นหา</button>
-    			 </form>
-		 </div>
+		 <?= $this->load->view('front/temp/search');?>
 		 <div class="content-section">
 		   		<div class="row h1Tab bgH1Zone">
 	                <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("library");?>">ห้องสมุดออนไลน์</a>  &gt;  <?= $ebook_group_name;?></h1></span>
