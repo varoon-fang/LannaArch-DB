@@ -87,7 +87,10 @@ class Library extends CI_Controller {
 	function search_book()
 	{
 		$this->data['meta_title'] = "ห้องสมุดออนไลน์ | ค้นหาหนังสือ";
-		$data = $this->search->search_more();
+
+		$data['list_cate'] = $this->ebook_model->list_cate();
+		$data['list_major'] = $this->search->major();
+		$data['search_result'] = $this->search->search_more();
 
 		$this->load->view('front/temp/header', $this->data);
 		$this->load->view('front/library/search-book-list', $data);

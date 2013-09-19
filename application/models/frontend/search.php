@@ -6,12 +6,25 @@ class Search extends CI_Model {
     {
         // Call the Model constructor
         parent::__construct();
+        $this->load->library("pagination");
     }
 
-    public function search_more()
+	function search_detail()
+		{
+			$data= array(
+				 'title'		=> $this->input->get('keyword'),
+				 'category' 	=> $this->input->get('category'),
+				 'major' 	=> $this->input->get('major'),
+				 'year'	=> $this->input->get('year'),
+				 'detail' 	=> $this->input->get('detail'),
+			);
+			return $data;
+		}
+
+    function search_more()
     {
 
-    	 $title		= $this->input->get('title');
+    	 $title		= $this->input->get('keyword');
 		 $category 	= $this->input->get('category');
 		 $major 	= $this->input->get('major');
 		 $year		= $this->input->get('year');
@@ -19,34 +32,52 @@ class Search extends CI_Model {
 
 		$sql_pages .= "select * from ebook where 1 ";
 
-		if($title=="0" OR $title=="" ){
+		// search by researcher
+		if($detail = '1'){
 
+			if($title=="0" OR $title=="" ){
+
+			}else{
+				$sql_pages .= " AND ebook_researcher LIKE '%$title%' ";
+
+			}
+
+		// search by title
+		}elseif($detail = '2'){
+
+			if($title=="0" OR $title=="" ){
+
+			}else{
+				$sql_pages .= " AND ebook_title LIKE '%$title%' ";
+
+			}
+
+		// search all
 		}else{
-			$sql_pages .= " AND property_geo='$title' ";
+
+			if($title=="0" OR $title=="" ){
+
+			}else{
+				$sql_pages .= " AND ebook_title LIKE '%$title%' ";
+				$sql_pages .= " AND ebook_researcher LIKE '%$title%' ";
+			}
 
 		}
+		// all search
 		if($category=="0" OR $category=="" ){
 
 		}else{
-			$sql_pages .= " AND property_province='$category' ";
+			$sql_pages .= " AND ebook_group='$category' ";
 		}
 		if($major=="0" OR $major=="" ){
 
 		}else{
-			$sql_pages .= " AND property_type= '$major' ";
+			$sql_pages .= " AND ebook_major= '$major' ";
 		}
 		if($year=="0" || $year==""){
 
 		}else{
-			$sql_pages .= " AND property_price <= '$year' ";
-		}
-		// reseacher or title
-		if($detail=="0" || $detail==""){
-
-		}elseif($detail=="1"){
-			$sql_pages .= " AND property_price <= '$detail' ";
-		}elseif($detail=="2"){
-			$sql_pages .= " AND property_price <= '$detail' ";
+			$sql_pages .= " AND ebook_research_year = '$year' ";
 		}
 
 		$sql3= $sql_pages ;
@@ -54,7 +85,7 @@ class Search extends CI_Model {
 
 		$count = $query->num_rows();
 
-		$config['base_url']=site_url()."library/search?title=$title&category=$category&major=$major&year=$year&detail=$detail";
+		$config['base_url']=site_url()."library/search_book?keyword=$title&category=$category&major=$major&year=$year&detail=$detail";
 
 		$config['total_rows']=$count;
 		$config['per_page']=2;
@@ -87,49 +118,66 @@ class Search extends CI_Model {
 
 		$per_page= $this->input->get('per_page');
 
-		if($title=="0" OR $title=="" ){
+		// search database
+		 // search by researcher
+		if($detail = '1'){
 
+			if($title=="0" OR $title=="" ){
+
+			}else{
+				$this->db->like('ebook_researcher' , $title);
+
+			}
+
+		// search by title
+		}elseif($detail = '2'){
+
+			if($title=="0" OR $title=="" ){
+
+			}else{
+				$this->db->like('ebook_title' , $title);
+
+			}
+
+		// search all
 		}else{
-			$this->db->where('property_geo' , $title);
-		}
-		if($category=="0" OR $category=="" ){
 
-		}else{
-			$this->db->where('property_province' , $category);
-		}
-		if($category=="0"){
+			if($title=="0" OR $title=="" ){
 
-		}else{
-			$this->db->where('property_cate' , $category);
+			}else{
+				$this->db->like('ebook_researcher' , $title);
+				$this->db->like('ebook_title' , $title);
+			}
 		}
-		if($major=="0" ){
+			// all search
+			if($category=="0" OR $category=="" ){
 
-		}else{
-			$this->db->where('property_type' , $major);
-		}
-		if($year=="0" || $year==""){
+			}else{
+				$this->db->where('ebook_group' , $category);
 
-		}else{
-			$this->db->where('property_price <=' , $year);
-		}
-		if($detail=="0" || $detail==""){
+			}
+			if($major=="0" OR $major=="" ){
 
-		}elseif($detail=="1"){
-			$this->db->where('property_price <=' , $detail);
-		}elseif($detail=="1"){
-			$this->db->where('property_price <=' , $detail);
-		}
+			}else{
+				$this->db->where('ebook_major' , $major);
+			}
+			if($year=="0" || $year==""){
 
+			}else{
+				$this->db->where('ebook_research_year' , $year);
+			}
+		//$this->db->where(1);
 		$this->db->select('*');
-		$this->db->from('property');
+		$this->db->from('ebook');
 		$this->db->limit($config['per_page'], $per_page);
-
-		$data['rs_property']=$this->db->get();
+		$data=$this->db->get()->result_array();
 
 
 			return $data;
 
+
     }
+
 	public function major()
 	{
 		// major group
