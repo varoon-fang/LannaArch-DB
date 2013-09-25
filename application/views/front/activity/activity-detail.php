@@ -21,7 +21,7 @@
       <br class="clearfix">
 
 	  <div class="bookLibrarySearch well bgNavZoneSub">
-      <p><?= $res_activity['activity_date'];?></p>
+      <p><?= osdate("%d %B %Y, %H:%M", $res_activity['activity_date'], 'ISO-8859-7');?></p>
      <h5> <?= $res_activity['activity_detail'];?></h5>
 
       <br />

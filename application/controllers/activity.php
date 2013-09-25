@@ -6,7 +6,7 @@ class Activity extends CI_Controller {
         // Call the constructor
         parent::__construct();
 
-        	$this->load->helper('text');
+        	$this->load->helper('osdate');
     }
 
 	//------------------------ activity --------------------------

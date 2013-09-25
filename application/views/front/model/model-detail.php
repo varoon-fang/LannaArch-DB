@@ -1,35 +1,59 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>360 degrees product view</title>
+<!-- NAVBAR
+================================================== -->
+    <body class="bgBodyZone">
 
-        <link href="<?= site_url();?>assetss/css/rgb7style.css" rel="stylesheet">
+        <!-- Menu Header
+================================================== -->
+        <?= $this->load->view('front/temp/menu');?>
 
-        <script type="text/javascript" src="<?= site_url();?>assetss/js/jquery-1.4.4.min.js" ></script>
-        <script type="text/javascript" src="<?= site_url();?>assetss/js/j360.js" ></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function() {
-                jQuery('#product').j360();
-            });
-        </script>
+        <!--======sub Nav=======-->
+		 <?= $this->load->view('front/temp/submenu');?>
+
+        <div class="container bgContentZone">
+
+        <!--=========Content====================-->
+    <div class="content-sub-section">
+
+	   <br class="clearfix">
+
+	   <div class="content-section">
+	     		<div class="row h1Tab bgH1Zone">
+	                 <span class="pull-left"><h1 class="pull-left"><a href="<?= site_url("architecture/model");?>">หุ่นจำลอง</a> &gt; <?= $rs_model['models_title'];?></h1> </span>
+	     		</div><!--end row-->
+
+      <br class="clearfix">
 
 
-    </head>
+      <div class="bookLibrarySearch well bgNavZoneSub">
+
+      <h3><span class="pull-left">ชื่อ <?= $rs_model['models_title'];?></span></h3>
+      <br /><br />
+      <h4>รายละเอียด :</h4> <?= $rs_model['models_detail'];?>
+      <br />
+      </div>
+
+	      <section id="subContent" >
+	    	  <br class="clearfix">
+		    	 <div class="content-section">
+
+	    		    	<div class="row ">
+	    		    		<?php
+							 	foreach($rs_model_album as $row){
+						 	?>
+	    		    		<!--====== items ======-->
+	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
+	    		    		    <a href="<?= site_url("images/models/resize/$row[models_album_name]");?>" data-fancybox-group="gallery" class="fancybox">
+	    		    				<img src="<?= site_url("images/models/thumbs/$row[models_album_name]");?>" class="img-responsive piclist"/>
+    		    				</a>
+	    		    		</div><!-- /.col-lg-3 -->
+	    		    		<? }?>
+	    		    	</div><!-- /.row -->
+					</div>
 
 
-    <body  style="width: 100%px; height: 500px; overflow: hidden;" class="3dPage">
+	  </section><!--end subContent-->
 
-        <center>
-            <div id="product" style="width: 570px; height: 320px; overflow: hidden;">
-				<?php
-					foreach($rs_model_album as $fett){
-				?>
-					<img src="<?= site_url("images/models/resize/$fett[models_album_name]");?>" width="570px" />
-				<? }?>
-            </div>
-            <h3><?= $rs_model['models_title'];?></h3>
-              <?= $rs_model['models_detail'];?>
-        </center>
-    </body>
-</html>
+    </div>
+    </div>
+
+   <!-- FOOTER -->

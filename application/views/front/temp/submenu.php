@@ -5,10 +5,8 @@
                 <nav class="subMenu">
 
                     <ul class="nav navbar-nav  ">
-                        <li <? if($this->uri->segment(1)=="library"){ echo 'class="active"';};?>><a href="<?= site_url('library');?>">ห้องสมุดหนังสือ</a></li>
-                        <li <? if($this->uri->segment(1)=="gallery" OR $this->uri->segment(1)=="gallery_more" OR $this->uri->segment(2)=="gallery_detail") { echo 'class="active"';};?> ><a href="<?= site_url('gallery');?>">ห้องสมุดภาพ</a></li>
-
-                        <li class="dropdown ">
+                         <li <? if($this->uri->segment(1)=="information_lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('information_lanna');?>">ข้อมูลล้านนา</a></li>
+						 <li class="dropdown ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">วัฒนธรรมและประเพณี <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?= site_url("society");?>">เดือนมกราคม</a></li>
@@ -27,7 +25,6 @@
                             </ul>
                         </li>
                         <li <? if($this->uri->segment(1)=="art"){ echo 'class="active"';};?> ><a href="<?= site_url('art');?>">ศิลปกรรม</a></li>
-                        <li <? if($this->uri->segment(1)=="information_lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('information_lanna');?>">ข้อมูลล้านนา</a></li>
                         <li <? if($this->uri->segment(1)=="architecture"){ echo 'class="active"';};?> class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ห้องสมุดสถาปัตยกรรม <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -37,6 +34,13 @@
                                 <li><a href="<?= site_url('architecture/hologram');?>">ภาพ 3 มิติ</a></li>
                             </ul>
                         </li>
+                        <li <? if($this->uri->segment(1)=="library"){ echo 'class="active"';};?>><a href="<?= site_url('library');?>">ห้องสมุดหนังสือ</a></li>
+                        <li <? if($this->uri->segment(1)=="gallery" OR $this->uri->segment(1)=="gallery_more" OR $this->uri->segment(2)=="gallery_detail") { echo 'class="active"';};?> ><a href="<?= site_url('gallery');?>">ห้องสมุดภาพ</a></li>
+
+
+
+
+
                     </ul>
 
 

@@ -260,7 +260,7 @@ class Architecture extends CI_Controller {
 		$count = $query->num_rows();
 
 		$config['base_url']=site_url()."architecture/model";
-		$config['per_page']=6;
+		$config['per_page']=3;
 		$config['total_rows']=$count;
 		$config['page_query_string']= false;
 		$config['uri_segment'] = 3;
@@ -294,7 +294,7 @@ class Architecture extends CI_Controller {
 
 
 		$this->load->view('front/temp/header', $this->data);
-		$this->load->view('front/model/model', $data);
+		$this->load->view('front/model/model-list', $data);
 		$this->load->view('front/temp/footer');
 	}
 
@@ -306,7 +306,10 @@ class Architecture extends CI_Controller {
 		$sql_album = "select * from models_album where models_id='$id' order by models_album_num asc ";
 			$data['rs_model_album'] = $this->db->query($sql_album)->result_array();
 
+		$this->data['meta_title'] = "ห้องสมุดสถาปัตยกรรม | ".$data['rs_model']['models_title']."";
+		$this->load->view('front/temp/header', $this->data);
 		$this->load->view('front/model/model-detail', $data);
+		$this->load->view('front/temp/footer');
 
 	}
 
