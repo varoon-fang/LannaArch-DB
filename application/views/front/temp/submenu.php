@@ -9,18 +9,18 @@
 						 <li class="dropdown ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">วัฒนธรรมและประเพณี <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= site_url("society");?>">เดือนมกราคม</a></li>
-                                <li><a href="library-culture-feb1.html">เดือนกุมภาพันธ์</a></li>
-                                <li><a href="library-culture-mar1.html">เดือนมีนาคม</a></li>
-                                <li><a href="library-culture-apr1.html">เดือนเมษายน</a></li>
-                                <li><a href="library-culture-may1.html">เดือนพฤษภาคม</a></li>
-                                <li><a href="library-culture-Jun1.html">เดือนมิถุนายน</a></li>
-                                <li><a href="library-culture-Jly1.html">เดือนกรกฎาคม</a></li>
-                                <li><a href="library-culture-aug1.html">เดือนสิงหาคม</a></li>
-                                <li><a href="library-culture-sep1.html">เดือนกันยายน</a></li>
-                                <li><a href="library-culture-oct1.html">เดือนตุลาคม</a></li>
-                                <li><a href="library-culture-nov1.html">เดือนพฤศจิกายน</a></li>
-                                <li><a href="library-culture-dec1.html">เดือนธันวาคม</a></li>
+                                <li><a href="<?= site_url("society/jan_1");?>">เดือนมกราคม</a></li>
+                                <li><a href="<?= site_url("society/feb_1");?>">เดือนกุมภาพันธ์</a></li>
+                                <li><a href="<?= site_url("society/mar_1");?>">เดือนมีนาคม</a></li>
+                                <li><a href="<?= site_url("society/apr_1");?>">เดือนเมษายน</a></li>
+                                <li><a href="<?= site_url("society/may_1");?>">เดือนพฤษภาคม</a></li>
+                                <li><a href="<?= site_url("society/jun_1");?>">เดือนมิถุนายน</a></li>
+                                <li><a href="<?= site_url("society/july_1");?>">เดือนกรกฎาคม</a></li>
+                                <li><a href="<?= site_url("society/aug_1");?>">เดือนสิงหาคม</a></li>
+                                <li><a href="<?= site_url("society/sep_1");?>">เดือนกันยายน</a></li>
+                                <li><a href="<?= site_url("society/oct_1");?>">เดือนตุลาคม</a></li>
+                                <li><a href="<?= site_url("society/nov_1");?>">เดือนพฤศจิกายน</a></li>
+                                <li><a href="<?= site_url("society/dec_1");?>">เดือนธันวาคม</a></li>
 
                             </ul>
                         </li>

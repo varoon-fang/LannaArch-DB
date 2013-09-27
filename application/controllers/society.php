@@ -7,7 +7,7 @@ class Society extends CI_Controller {
 	    	$this->data['meta_title'] = "วัฒนธรรมและประเพณี";
 	  }
 
-	function index()
+	function jan_1()
 	{
 
 		$this->load->view('front/temp/header', $this->data);
