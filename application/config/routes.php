@@ -40,6 +40,8 @@
 
 $route['default_controller'] = "home";
 $route['admin'] = "admin/dashboard";
+$route['society'] = "society/jan_1";
+$route['architecture'] = "architecture/information";
 $route['404_override'] = '';
 
 

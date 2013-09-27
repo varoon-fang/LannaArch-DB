@@ -38,8 +38,8 @@
 		       <ul class="nav nav-justified  ">
 		         <li <? if($this->uri->segment(1)==""){ echo 'class="active"';};?>><a href="<?= site_url();?>">หน้าหลัก </a></li>
 		         <li <? if($this->uri->segment(1)=="history"){ echo 'class="active"';};?> ><a href="<?= site_url("history");?>">ประวัติความเป็นมา </a></li>
-		         <li <? if($this->uri->segment(1)=="about"){ echo 'class="active"';};?> ><a href="<?= site_url("about");?>">เกี่ยวกับเรา</a></li>
-		         <li <? if($this->uri->segment(1)=="library" OR $this->uri->segment(1)=="architecture" OR $this->uri->segment(1)=="gallery" OR $this->uri->segment(1)=="society" OR $this->uri->segment(1)=="art" OR $this->uri->segment(1)=="information_lanna" ){ echo 'class="active"';};?> ><a href="<?= site_url("library");?>" >ห้องสมุดออนไลน์ </a></li>
+		         <li <? if($this->uri->segment(1)=="information_lanna"){ echo 'class="active"';};?> ><a href="<?= site_url('information_lanna');?>">ข้อมูลล้านนา</a></li>
+		         <li <? if($this->uri->segment(1)=="library" OR $this->uri->segment(1)=="architecture" OR $this->uri->segment(1)=="gallery" OR $this->uri->segment(1)=="society" OR $this->uri->segment(1)=="art"){ echo 'class="active"';};?> ><a href="<?= site_url("library");?>" >ห้องสมุดออนไลน์ </a></li>
 		         <li <? if($this->uri->segment(1)=="activity"){ echo 'class="active"';};?> ><a href="<?= site_url("activity");?>">กิจกรรม</a></li>
 		         <li <? if($this->uri->segment(1)=="contact"){ echo 'class="active"';};?> ><a href="<?= site_url("contact");?>">ติดต่อเรา</a></li>
 		       </ul>

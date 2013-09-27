@@ -6,9 +6,6 @@
   ================================================== -->
   	<?= $this->load->view('front/temp/menu');?>
 
-	<!--======sub Nav=======-->
-	 <?= $this->load->view('front/temp/submenu');?>
-
 	 <div class="container bgContentZone">
 
 <!--=========Content====================-->
