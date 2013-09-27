@@ -41,8 +41,8 @@
 						 	?>
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("images/gallery/resize/$row[gallery_album_name]");?>" data-fancybox-group="gallery" class="fancybox">
-	    		    				<img src="<?= site_url("images/gallery/thumbs/$row[gallery_album_name]");?>" class="img-responsive piclist"/>
+	    		    			<a href="<?= site_url("images/gallery/thumbs/$row[gallery_album_name]");?>" data-fancybox-group="gallery" class="fancybox">
+	    		    				<img src="<?= site_url("images/gallery/resize/$row[gallery_album_name]");?>" class="img-responsive piclist"/>
     		    				</a>
 	    		    		</div><!-- /.col-lg-3 -->
 	    		    		<? }?>

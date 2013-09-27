@@ -6,7 +6,7 @@ class Architecture extends CI_Controller {
         // Call the constructor
         parent::__construct();
 
-        	$this->load->helper('text');
+        	$this->load->helper('osdate_helper');
     }
 
 	//------------------------ layout --------------------------

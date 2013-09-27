@@ -24,7 +24,7 @@
       <br class="clearfix">
 
 	  <div class="bookLibrarySearch well bgNavZoneSub">
-      <p><?= $res_information['information_date'];?></p>
+      <p><?= osdate("%d %B %Y", $res_information['information_date'], "ISO-8859-7");?></p>
      <h5> <?= $res_information['information_detail'];?></h5>
 
       <br />
@@ -40,8 +40,8 @@
 						 	?>
 	    		    		<!--====== items ======-->
 	    		    		<div class="col-lg-3 col-sm-3  col-xs-6 ">
-	    		    			<a href="<?= site_url("images/information/resize/$row[information_album_name]");?>" class="fancybox">
-	    		    				<img src="<?= site_url("images/information/thumbs/$row[information_album_name]");?>" class="img-responsive piclist"/>
+	    		    			<a href="<?= site_url("images/information/thumbs/$row[information_album_name]");?>" data-fancybox-group="information" class="fancybox">
+	    		    				<img src="<?= site_url("images/information/resize/$row[information_album_name]");?>" class="img-responsive piclist"/>
     		    				</a>
 	    		    		</div><!-- /.col-lg-3 -->
 	    		    		<? }?>
