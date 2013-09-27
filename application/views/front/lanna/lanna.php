@@ -27,7 +27,7 @@
 			   	<a href="<?= site_url("information_lanna/nan");?>"><h1>จังหวัดน่าน</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
-		   		<a href="library-finearts-mental.html"><h1>จังหวัดแพร่</h1></a>
+		   		<a href="<?= site_url("information_lanna/phrae");?>"><h1>จังหวัดแพร่</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
 		   		<a href="library-finearts-sculpture.html"><h1>จังหวัดแม่อ่องสอน</h1></a>

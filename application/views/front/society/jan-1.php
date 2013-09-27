@@ -84,8 +84,8 @@
 
                                         <ul class="list-unstyled">
 
-                                            <li><a href="library-culture-jan1.html">ประเพณีทานหลัวหิงไฟ</a> </li>
-                                            <li><a href="library-culture-jan2.html">ประเพณีทานข้าวจี่-ข้าวหลาม</a></li>
+                                            <li><a href="jan-1.php">ประเพณีทานหลัวหิงไฟ</a> </li>
+                                            <li><a href="jan-2.php">ประเพณีทานข้าวจี่-ข้าวหลาม</a></li>
 
                                         </ul>
                                     </div>
