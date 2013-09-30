@@ -12,7 +12,6 @@
 
 		      		         <li><a href="<?= site_url();?>">หน้าหลัก</a></li>
 		      		         <li><a href="<?= site_url("history");?>">ประวัติความเป็นมา</a></li>
-		      		         <li><a href="<?= site_url("about");?>">เกี่ยวกับเรา</a></li>
 		      		         <li><a href="<?= site_url("activity");?>">กิจกรรม</a></li>
 		      		         <li><a href="<?= site_url("contact");?>">ติดต่อเรา</a></li>
 
