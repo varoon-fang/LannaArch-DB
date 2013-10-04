@@ -24,22 +24,22 @@
 			 </div>
 		   		<br class="clearfix">
 		   	<div class="well bgContentZone">
-			   	<a href="<?= site_url("art/composer");?>"><h1>คีตกรรม</h1></a>
+			   	<a href="<?= site_url("art/finearts");?>"><h1>คีตกรรม</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
-		   		<a href="library-finearts-mental.html"><h1>จิตกรรม</h1></a>
+		   		<a href="<?= site_url("art/finearts");?>"><h1>จิตกรรม</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
-		   		<a href="library-finearts-sculpture.html"><h1>ประติมากรรม</h1></a>
+		   		<a href="<?= site_url("art/Sculpture");?>"><h1>ประติมากรรม</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
-		   		<a href="library-finearts-literature.html"><h1>วรรณกรรม</h1></a>
+		   		<a href="<?= site_url("art/finearts");?>"><h1>วรรณกรรม</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
-		   		<a href="library-finearts-action.html"><h1>หัตถกรรม</h1></a>
+		   		<a href="<?= site_url("art/finearts");?>"><h1>หัตถกรรม</h1></a>
 		   	</div>
 		   	<div class="well bgContentZone">
-		   		<a href="library-finearts-elements.html"><h1>องประกอบสถาปัตยกรรม</h1></a>
+		   		<a href="<?= site_url("art/finearts");?>"><h1>องประกอบสถาปัตยกรรม</h1></a>
 		   	</div>
 
 		 </div>
